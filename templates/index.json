@@ -14,7 +14,6 @@
       "settings": {
         "tagline": "Heart Health Month Special",
         "headline": "Double Up on VINIA® Red Grape Superfood with",
-        "subheading": "Add your subheading text here.",
         "offer_amount": "$10 OFF",
         "offer_details": "ONGOING with 90-Day Double-Pack Subscriptions",
         "button_link": "shopify://collections/all",
@@ -27,7 +26,7 @@
         "mobile_image_alt": "Mobile banner image",
         "desktop_image": "shopify://shop_images/Supplement_2Bottles_1Box_90cps_alpha_2_2.png",
         "desktop_image_alt": "Desktop banner image",
-        "button_background_color": "#FFC107",
+        "button_background_color": "#ffd568",
         "button_text_color": "#000000"
       }
     },
