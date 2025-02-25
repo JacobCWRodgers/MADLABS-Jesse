@@ -29,19 +29,9 @@
         "button_background_color": "#ffd568",
         "button_text_color": "#ffffff"
       }
-    },
-    "custom_liquid_9gTtNw": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
     }
   },
   "order": [
-    "hero_L7X6xw",
-    "custom_liquid_9gTtNw"
+    "hero_L7X6xw"
   ]
 }
