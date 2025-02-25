@@ -1174,7 +1174,9 @@ deferred-media {
 /* component-button */
 /* Button - default */
 
-
+.brand-button {
+  background-color: {{ settings.button_solid_background }};
+}
 
 
 
