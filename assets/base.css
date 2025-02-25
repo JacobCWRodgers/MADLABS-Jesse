@@ -2545,12 +2545,12 @@ input[type='checkbox'] {
   transform: scale(1.07);
 }
 
-.header__icon .icon {
+/* .header__icon .icon {
   height: 2rem;
   width: 2rem;
   fill: none;
   vertical-align: middle;
-}
+} */
 
 .header__icon,
 .header__icon--cart .icon {
