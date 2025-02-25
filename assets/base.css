@@ -1178,7 +1178,7 @@ deferred-media {
   width: fit-content;
   padding: 1rem 3rem;
   text-align: center;
-  background-color: var(--color-solid-button-background); 
+  background-color: var(--color-button-background); 
   color: var(--color-button-text);
 }
 
