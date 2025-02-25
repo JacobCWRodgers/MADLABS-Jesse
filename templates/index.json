@@ -9,6 +9,27 @@
  */
 {
   "sections": {
+    "hero_L7X6xw": {
+      "type": "hero",
+      "settings": {
+        "tagline": "Heart Health Month Special",
+        "headline": "Double Up on VINIA® Red Grape Superfood with",
+        "subheading": "Add your subheading text here.",
+        "offer_amount": "$10 OFF",
+        "offer_details": "ONGOING with 90-Day Double-Pack Subscriptions",
+        "button_link": "shopify://collections/all",
+        "button_link_target": "_self",
+        "button_label": "Get Your VINIA",
+        "footer_note": "For 2 people or twice daily for High Performers & Athletes",
+        "background_color": "#7a194a",
+        "text_color": "#ffffff",
+        "mobile_image_alt": "Mobile banner image",
+        "desktop_image": "shopify://shop_images/Supplement_2Bottles_1Box_90cps_alpha_2_2.png",
+        "desktop_image_alt": "Desktop banner image",
+        "button_background_color": "#FFC107",
+        "button_text_color": "#000000"
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -40,9 +61,9 @@
         "image_height": "large",
         "desktop_content_position": "bottom-center",
         "show_text_box": false,
-        "image_behavior": "none",
         "desktop_content_alignment": "center",
         "color_scheme": "scheme-3",
+        "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
         "show_text_below": false
@@ -59,12 +80,11 @@
         "collection": "all",
         "products_to_show": 8,
         "columns_desktop": 4,
-        "color_scheme": "scheme-1",
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
         "enable_desktop_slider": false,
-        "swipe_on_mobile": false,
+        "color_scheme": "scheme-1",
         "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": true,
@@ -72,12 +92,14 @@
         "show_rating": false,
         "quick_add": "none",
         "columns_mobile": "2",
+        "swipe_on_mobile": false,
         "padding_top": 44,
         "padding_bottom": 36
       }
     }
   },
   "order": [
+    "hero_L7X6xw",
     "image_banner",
     "featured_collection"
   ]
