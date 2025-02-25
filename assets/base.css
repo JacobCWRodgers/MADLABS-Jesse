@@ -1175,12 +1175,7 @@ deferred-media {
 /* Button - default */
 
 .brand-button {
-   background-color: {{ settings_schema.colors.settings.button_background.label }};
-    border: none;
-    color: #fff;
-    padding: 12px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    background-color: {{ settings_schema.colors.settings.button_background.label }};
   }
 
 
