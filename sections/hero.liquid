@@ -10,6 +10,7 @@
     <div class="banner-image mobile-image">
       {% if section.settings.mobile_image %}
         <img
+          width="100"
           src="{{ section.settings.mobile_image | img_url: 'x720' }}"
           alt="{{ section.settings.mobile_image_alt | escape }}"
         >
