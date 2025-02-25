@@ -2581,11 +2581,12 @@ input[type='checkbox'] {
 
 details .header__icon-close {
   display: none;
+  width: 27px;
 }
 
 details[open] .header__icon-close {
   display: inline-block;
-  width: 27px;
+
 }
 
 account-icon {
