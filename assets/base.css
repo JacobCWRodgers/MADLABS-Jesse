@@ -1175,8 +1175,9 @@ deferred-media {
 /* Button - default */
 
 .brand-button {
-    background-color: {{ settings_schema.colors.settings.button_background.label }};
-  }
+    background-color: {{ settings.colors.settings.button_background.label }};
+    color: {{ settings.colors.settings.button_background.label }}
+}
 
 
 .button--secondary,
