@@ -1,6 +1,236 @@
+<section id="vinia-1000-grapes-section" class="vinia-1000-grapes-section">
+  <div class="vinia-1000-container">
+    <!-- Heading -->
+    <h2 class="vinia-1000-heading">{{ section.settings.main_heading }}</h2>
+
+    <!-- Subheading / Intro Text -->
+    <div class="vinia-1000-subheading">
+      {{ section.settings.main_subheading }}
+    </div>
+
+    <!-- Grape Image + Resveratrol Text -->
+    <div class="vinia-1000-image-text">
+      {% if section.settings.grape_image %}
+        <img
+          class="vinia-1000-image"
+          src="{{ section.settings.grape_image | img_url: 'master' }}"
+          alt="Red Grape Powder"
+        >
+      {% endif %}
+      <p class="vinia-1000-resveratrol-text">
+        {{ section.settings.resveratrol_text }}
+      </p>
+    </div>
+
+    <!-- Stats Row -->
+    <div class="vinia-1000-stats">
+      <div class="vinia-1000-stat">
+        <h3 class="vinia-1000-stat-heading">{{ section.settings.arterial_dilation }}% Increase</h3>
+        <p>In Arterial Dilation</p>
+      </div>
+      <div class="vinia-1000-stat">
+        <h3 class="vinia-1000-stat-heading">{{ section.settings.nitric_oxide }}% Increase</h3>
+        <p>In Nitric Oxide</p>
+      </div>
+      <div class="vinia-1000-stat">
+        <h3 class="vinia-1000-stat-heading">{{ section.settings.et1_decrease }}% Decrease</h3>
+        <p>In ET-1</p>
+      </div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="vinia-1000-buttons">
+      {% if section.settings.read_clinicals_link != blank %}
+        <a
+          href="{{ section.settings.read_clinicals_link }}"
+          class="vinia-1000-btn vinia-1000-btn-secondary"
+        >
+          {{ section.settings.read_clinicals_text }}
+        </a>
+      {% endif %}
+
+      {% if section.settings.cta_link != blank %}
+        <a
+          href="{{ section.settings.cta_link }}"
+          class="vinia-1000-btn vinia-1000-btn-primary"
+        >
+          {{ section.settings.cta_text }}
+        </a>
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- Inline styling for quick setup; move to your CSS file if desired -->
+  <style>
+    /* Container */
+    #vinia-1000-grapes-section .vinia-1000-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 30px 20px;
+      font-family: inherit;
+      color: #4a4a4a;
+    }
+
+    /* Heading & Subheading */
+    .vinia-1000-heading {
+      text-align: center;
+      margin-bottom: 10px;
+      color: #7a073e; /* Example color */
+    }
+    .vinia-1000-subheading {
+      text-align: center;
+      margin-bottom: 40px;
+      line-height: 1.6em;
+    }
+
+    /* Image & Resveratrol text */
+    .vinia-1000-image-text {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 40px;
+      gap: 20px;
+    }
+    .vinia-1000-image {
+      max-width: 300px;
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .vinia-1000-resveratrol-text {
+      max-width: 400px;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    /* Stats row */
+    .vinia-1000-stats {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+    .vinia-1000-stat {
+      text-align: center;
+      flex: 1 1 180px;
+      min-width: 180px;
+    }
+    .vinia-1000-stat-heading {
+      margin-bottom: 8px;
+      color: #7a073e; /* Example color */
+    }
+
+    /* Buttons */
+    .vinia-1000-buttons {
+      text-align: center;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+    .vinia-1000-btn {
+      display: inline-block;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: 600;
+      color: #fff;
+    }
+    .vinia-1000-btn-primary {
+      background-color: #7a073e; /* Example color */
+    }
+    .vinia-1000-btn-secondary {
+      background-color: #c24676; /* Example color */
+    }
+
+    /* Basic Mobile Responsiveness */
+    @media (max-width: 768px) {
+      .vinia-1000-image-text {
+        flex-direction: column;
+      }
+      .vinia-1000-stats {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</section>
+
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "benefits",
+  "settings": [
+    {
+      "type": "text",
+      "id": "main_heading",
+      "label": "Main Heading",
+      "default": "The Health Benefits of 1000 Grapes in Each Serving minus the sugar and calories"
+    },
+    {
+      "type": "textarea",
+      "id": "main_subheading",
+      "label": "Subheading Text",
+      "default": "Meet VINIA® – a unique grape superfood containing the king of Polyphenols, Piceid Resveratrol, and other heart-supporting plant-based bioactives..."
+    },
+    {
+      "type": "image_picker",
+      "id": "grape_image",
+      "label": "Grape/Powder Image"
+    },
+    {
+      "type": "text",
+      "id": "resveratrol_text",
+      "label": "Resveratrol Text",
+      "default": "6mg Red Grape Piceid Resveratrol"
+    },
+    {
+      "type": "text",
+      "id": "arterial_dilation",
+      "label": "Increase In Arterial Dilation (%)",
+      "default": "70"
+    },
+    {
+      "type": "text",
+      "id": "nitric_oxide",
+      "label": "Increase in Nitric Oxide (%)",
+      "default": "120"
+    },
+    {
+      "type": "text",
+      "id": "et1_decrease",
+      "label": "Decrease in ET-1 (%)",
+      "default": "50"
+    },
+    {
+      "type": "text",
+      "id": "read_clinicals_text",
+      "label": "Read Clinicals Button Text",
+      "default": "Read Clinicals"
+    },
+    {
+      "type": "url",
+      "id": "read_clinicals_link",
+      "label": "Read Clinicals Button Link"
+    },
+    {
+      "type": "text",
+      "id": "cta_text",
+      "label": "CTA Button Text",
+      "default": "Get Your VINIA"
+    },
+    {
+      "type": "url",
+      "id": "cta_link",
+      "label": "CTA Button Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "VINIA - 1000 Grapes Section"
+    }
+  ]
+}
 {% endschema %}
