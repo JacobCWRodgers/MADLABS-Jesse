@@ -1,6 +1,288 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
+{% comment %}
+  Heart Health Banner Section
+  - Mobile & desktop responsive
+  - Allows easy content updates through theme customizer
+{% endcomment %}
+
+<section id="heart-health-banner" class="heart-health-banner-section">
+  <div class="banner-wrapper">
+    <!-- Mobile Image -->
+    <div class="banner-image mobile-image">
+      {% if section.settings.mobile_image %}
+        <img
+          src="{{ section.settings.mobile_image | img_url: 'x720' }}"
+          alt="{{ section.settings.mobile_image_alt | escape }}"
+        >
+      {% endif %}
+    </div>
+
+    <!-- Desktop Image -->
+    <div class="banner-image desktop-image">
+      {% if section.settings.desktop_image %}
+        <img
+          src="{{ section.settings.desktop_image | img_url: 'x720' }}"
+          alt="{{ section.settings.desktop_image_alt | escape }}"
+        >
+      {% endif %}
+    </div>
+
+    <!-- Text/Content Container -->
+    <div class="banner-content">
+      {% if section.settings.tagline != '' %}
+        <h4 class="banner-tagline">{{ section.settings.tagline }}</h4>
+      {% endif %}
+
+      {% if section.settings.headline != '' %}
+        <h2 class="banner-headline">{{ section.settings.headline }}</h2>
+      {% endif %}
+
+      {% if section.settings.subheading != '' %}
+        <p class="banner-subheading">{{ section.settings.subheading }}</p>
+      {% endif %}
+
+      {% if section.settings.offer_amount != '' %}
+        <div class="banner-offer">
+          <span class="offer-amount">{{ section.settings.offer_amount }}</span>
+          {% if section.settings.offer_details != '' %}
+            <p class="offer-details">{{ section.settings.offer_details }}</p>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% if section.settings.button_label != '' %}
+        <a
+          href="{{ section.settings.button_link }}"
+          class="banner-button"
+          target="{{ section.settings.button_link_target }}"
+        >
+          {{ section.settings.button_label }}
+        </a>
+      {% endif %}
+
+      {% if section.settings.footer_note != '' %}
+        <p class="banner-footer-note">{{ section.settings.footer_note }}</p>
+      {% endif %}
+    </div>
+    <!-- .banner-content -->
+  </div>
+  <!-- .banner-wrapper -->
+</section>
+
+<style>
+  #heart-health-banner {
+    padding: 20px;
+    background-color: {{ section.settings.background_color }};
+    color: {{ section.settings.text_color }};
   }
+  .banner-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Images */
+  .banner-image {
+    width: 100%;
+    text-align: center;
+  }
+  .banner-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Hide desktop image on mobile, hide mobile image on desktop */
+  .mobile-image { display: block; }
+  .desktop-image { display: none; }
+
+  /* Content area */
+  .banner-content {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .banner-tagline {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .banner-headline {
+    margin: 10px 0 0;
+    font-size: 2rem;
+    line-height: 1.2em;
+  }
+  .banner-subheading {
+    margin: 10px 0;
+    font-size: 1.2rem;
+  }
+  .banner-offer .offer-amount {
+    font-size: 3rem;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+  }
+  .banner-offer .offer-details {
+    margin-top: 5px;
+    font-size: 1rem;
+  }
+  .banner-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: {{ section.settings.button_background_color }};
+    color: {{ section.settings.button_text_color }};
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+  .banner-button:hover {
+    opacity: 0.9;
+  }
+  .banner-footer-note {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+
+  /* Desktop responsive */
+  @media (min-width: 768px) {
+    .mobile-image { display: none; }
+    .desktop-image { display: block; }
+
+    .banner-wrapper {
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+    .banner-image,
+    .banner-content {
+      width: 48%;
+    }
+    .banner-content {
+      text-align: left;
+      margin-top: 0;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Heart Health Banner",
+  "settings": [
+    {
+      "type": "text",
+      "id": "tagline",
+      "label": "Tagline",
+      "default": "Heart Health Month Special"
+    },
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "Headline",
+      "default": "Double Up on VINIA® Red Grape Superfood with"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Add your subheading text here."
+    },
+    {
+      "type": "text",
+      "id": "offer_amount",
+      "label": "Offer Amount",
+      "default": "$10 OFF"
+    },
+    {
+      "type": "text",
+      "id": "offer_details",
+      "label": "Offer Details",
+      "default": "ONGOING with 90-Day Double-Pack Subscriptions"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link",
+      "default": "/collections/all"
+    },
+    {
+      "type": "select",
+      "id": "button_link_target",
+      "label": "Button Link Target",
+      "options": [
+        { "value": "_self", "label": "Same window" },
+        { "value": "_blank", "label": "New window" }
+      ],
+      "default": "_self"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label",
+      "default": "Get Your VINIA"
+    },
+    {
+      "type": "text",
+      "id": "footer_note",
+      "label": "Footer Note",
+      "default": "For 2 people or twice daily for High Performers & Athletes"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#7a194a"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile Image"
+    },
+    {
+      "type": "text",
+      "id": "mobile_image_alt",
+      "label": "Mobile Image Alt Text",
+      "default": "Mobile banner image"
+    },
+    {
+      "type": "image_picker",
+      "id": "desktop_image",
+      "label": "Desktop Image"
+    },
+    {
+      "type": "text",
+      "id": "desktop_image_alt",
+      "label": "Desktop Image Alt Text",
+      "default": "Desktop banner image"
+    },
+    {
+      "type": "color",
+      "id": "button_background_color",
+      "label": "Button Background Color",
+      "default": "#FFC107"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button Text Color",
+      "default": "#000000"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Heart Health Banner"
+    }
+  ]
+}
 {% endschema %}
