@@ -1174,13 +1174,7 @@ deferred-media {
 /* component-button */
 /* Button - default */
 
-.custom-button {
-  width: fit-content;
-  padding: 1rem 3rem;
-  text-align: center;
-  background-color: #FFD568; 
-  color: var(--color-button-text);
-}
+
 
 
 
