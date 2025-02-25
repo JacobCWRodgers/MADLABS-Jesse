@@ -1200,7 +1200,7 @@ deferred-media {
 .brand-button .button_icon {
   position: absolute;
   right: 3px;
-  bottom: 1px;
+  top: 8px;
 }
 
 .button--secondary,
