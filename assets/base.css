@@ -1195,11 +1195,11 @@ deferred-media {
   text-decoration: none;
 }
 .brand-button span {
-  margin: 0 15px;
+  margin: 0 20px;
 }
 .brand-button .button_icon {
   position: absolute;
-  right: 3px;
+  right: 5px;
   top: 8px;
 }
 
