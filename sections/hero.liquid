@@ -67,114 +67,106 @@
 </section>
 
 <style>
-    #heart-health-banner {
-      padding: 20px;
-      background-color: {{ section.settings.background_color }};
-      color: {{ section.settings.text_color }};
-    }
+  #heart-health-banner {
+    padding: 20px;
+    background-color: {{ section.settings.background_color }};
+    color: {{ section.settings.text_color }};
+  }
+  .banner-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Images */
+  .banner-image {
+    width: 100%;
+    text-align: center;
+  }
+  .banner-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Hide desktop image on mobile, hide mobile image on desktop */
+  .mobile-image { display: block; }
+  .desktop-image { display: none; }
+
+  /* Content area */
+  .banner-content {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
+  #heart-health-banner .banner-tagline {
+    margin: 10px 0;
+    font-size: 38.35px;
+    line-height: 45px;
+    text-transform: capitalize;
+    color: white;
+    font-weight: 400;
+    text-align: center;
+  }
+  .banner-headline {
+    text-align: center;
+    margin: 10px 0 0 0;
+    font-size: 20px;
+    line-height: 22px;
+    color: white;
+    line-height: 1.2em;
+    padding: 0 1.4em;
+  }
+  .banner-subheading {
+    margin: 10px 0;
+    font-size: 1.2rem;
+  }
+  .offer-amount {
+    margin: -32px 0;
+    font-size: 88px;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  .offer-details {
+    margin: 0;
+    padding: 0 50px;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  .banner-footer-note {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+
+
+
+  /* Desktop responsive */
+  @media (min-width: 768px) {
+    .mobile-image { display: none; }
+    .desktop-image { display: block; }
+
     .banner-wrapper {
-      max-width: 1200px;
-      margin: 0 auto;
-      position: relative;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
+      flex-wrap: nowrap;
+      justify-content: space-between;
     }
-
-    /* Images */
-    .banner-image {
-      width: 100%;
-      text-align: center;
-    }
-    .banner-image img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-    }
-
-    /* Hide desktop image on mobile, hide mobile image on desktop */
-    .mobile-image { display: block; }
-    .desktop-image { display: none; }
-
-    /* Content area */
+    .banner-image,
     .banner-content {
-      width: 100%;
-      text-align: center;
-      margin-top: 20px;
+      width: 48%;
     }
-    #heart-health-banner .banner-tagline {
-      margin: 10px 0;
-      font-size: 38.35px;
-      line-height: 45px;
-      text-transform: capitalize;
-      color: white;
-      font-weight: 400;
-      text-align: center;
+    .banner-content {
+      text-align: left;
+      margin-top: 0;
     }
-    .banner-headline {
-      text-align: center;
-      margin: 10px 0 0 0;
-      font-size: 20px;
-      line-height: 22px;
-      color: white;
-      line-height: 1.2em;
-      padding: 0 1.4em;
-    }
-    .banner-subheading {
-      margin: 10px 0;
-      font-size: 1.2rem;
-    }
-    .offer-amount {
-      margin: -32px 0;
-      font-size: 88px;
-      font-weight: 400;
-      text-align: center;
-    }
-
-    .offer-details {
-      margin: 0;
-      padding: 0 50px;
-      font-size: 16px;
-      font-weight: 400;
-      text-align: center;
-    }
-
-    .banner-footer-note {
-      margin-top: 15px;
-      font-size: 0.9rem;
-      opacity: 0.8;
-    }
-
-    /* .brand-button {
-    background-color: {{ section.settings.button_background_color}};
-    border: none;
-    color: #fff;
-    padding: 12px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  } */
-
-
-    /* Desktop responsive */
-    @media (min-width: 768px) {
-      .mobile-image { display: none; }
-      .desktop-image { display: block; }
-
-      .banner-wrapper {
-        flex-wrap: nowrap;
-        justify-content: space-between;
-      }
-      .banner-image,
-      .banner-content {
-        width: 48%;
-      }
-      .banner-content {
-        text-align: left;
-        margin-top: 0;
-      }
-    }
+  }
 </style>
 
 {% schema %}
