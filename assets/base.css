@@ -1185,6 +1185,9 @@ deferred-media {
     border-radius: 30px;
   position: relative;
 }
+.brand-button span {
+  margin: 10px 0;
+}
 .brand-button .button_icon {
     position: absolute;
     right: 1px;
