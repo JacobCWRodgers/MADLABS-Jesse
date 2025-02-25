@@ -1177,6 +1177,9 @@ deferred-media {
 .brand-button {
     background-color: #FFD568;
     color: #6F1645;
+    width: fit-content;
+    padding: 10px 3rem;
+    margin: 10px 0;
 }
 
 
