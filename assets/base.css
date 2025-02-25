@@ -1174,6 +1174,13 @@ deferred-media {
 /* component-button */
 /* Button - default */
 
+.custom-button {
+  width: fit-content;
+  padding: 1rem 3rem;
+  text-align: center;
+}
+
+
 .button--secondary,
 .button--tertiary {
   --color-button: var(--color-secondary-button);
