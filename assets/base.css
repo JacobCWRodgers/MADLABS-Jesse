@@ -1175,6 +1175,7 @@ deferred-media {
 /* Button - default */
 
 .brand-button {
+  display: block;
     background-color: #FFD568;
     color: #6F1645;
     width: fit-content;
