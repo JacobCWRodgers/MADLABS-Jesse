@@ -29,9 +29,25 @@
         "button_background_color": "#ffd568",
         "button_text_color": "#ffffff"
       }
+    },
+    "benefits_ykLcm3": {
+      "type": "benefits",
+      "settings": {
+        "main_heading": "The Health Benefits of 1000 Grapes in Each Serving minus the sugar and calories",
+        "main_subheading": "Meet VINIA® – a unique grape superfood containing the king of Polyphenols, Piceid Resveratrol, and other heart-supporting plant-based bioactives...",
+        "resveratrol_text": "6mg Red Grape Piceid Resveratrol",
+        "arterial_dilation": "70",
+        "nitric_oxide": "120",
+        "et1_decrease": "50",
+        "read_clinicals_text": "Read Clinicals",
+        "read_clinicals_link": "",
+        "cta_text": "Get Your VINIA",
+        "cta_link": ""
+      }
     }
   },
   "order": [
-    "hero_L7X6xw"
+    "hero_L7X6xw",
+    "benefits_ykLcm3"
   ]
 }
