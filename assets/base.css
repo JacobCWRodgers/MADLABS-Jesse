@@ -1175,14 +1175,14 @@ deferred-media {
 /* Button - default */
 
 .brand-button {
-  display: block;
+    display: flex;
+    justify-content: end;
     background-color: #FFD568;
     color: #6F1645;
     width: fit-content;
     padding: 10px 3rem;
     margin: 10px auto;
     border-radius: 30px;
-    
 }
 
 
