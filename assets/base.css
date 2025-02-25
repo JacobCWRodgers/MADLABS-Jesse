@@ -1186,11 +1186,11 @@ deferred-media {
   position: relative;
 }
 .brand-button span {
-  margin: 0 10px;
+  margin: 0 15px;
 }
 .brand-button .button_icon {
     position: absolute;
-    right: 1px;
+    right: 5px;
 }
 
 
