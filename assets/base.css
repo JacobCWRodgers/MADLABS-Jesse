@@ -1180,7 +1180,8 @@ deferred-media {
     color: #6F1645;
     width: fit-content;
     padding: 10px 3rem;
-    margin: 10px 0;
+    margin: 10px auto;
+    
 }
 
 
