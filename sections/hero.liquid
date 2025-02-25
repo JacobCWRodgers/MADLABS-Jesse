@@ -7,16 +7,6 @@
 <section id="heart-health-banner" class="heart-health-banner-section">
   <div class="banner-wrapper">
     <!-- Mobile Image -->
-    <div class="banner-image mobile-image">
-      {% if section.settings.mobile_image %}
-        <img
-          width="100"
-          height="100"
-          src="{{ section.settings.mobile_image | img_url: 'x720' }}"
-          alt="{{ section.settings.mobile_image_alt | escape }}"
-        >
-      {% endif %}
-    </div>
 
     <!-- Desktop Image -->
     <div class="banner-image desktop-image">
@@ -66,6 +56,16 @@
       {% if section.settings.footer_note != '' %}
         <p class="banner-footer-note">{{ section.settings.footer_note }}</p>
       {% endif %}
+      <div class="banner-image mobile-image">
+        {% if section.settings.mobile_image %}
+          <img
+            width="100"
+            height="100"
+            src="{{ section.settings.mobile_image | img_url: 'x720' }}"
+            alt="{{ section.settings.mobile_image_alt | escape }}"
+          >
+        {% endif %}
+      </div>
     </div>
     <!-- .banner-content -->
   </div>
