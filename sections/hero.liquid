@@ -30,10 +30,6 @@
         <h2 class="banner-headline">{{ section.settings.headline }}</h2>
       {% endif %}
 
-      {% if section.settings.subheading != '' %}
-        <p class="banner-subheading">{{ section.settings.subheading }}</p>
-      {% endif %}
-
       {% if section.settings.offer_amount != '' %}
         <div class="banner-offer">
           <span class="offer-amount">{{ section.settings.offer_amount }}</span>
@@ -197,13 +193,7 @@
       "label": "Headline",
       "default": "Double Up on VINIA® Red Grape Superfood with"
     },
-    {
-      "type": "text",
-      "id": "subheading",
-      "label": "Subheading",
-      "default": "Add your subheading text here."
-    },
-    {
+        {
       "type": "text",
       "id": "offer_amount",
       "label": "Offer Amount",
