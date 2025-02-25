@@ -2353,7 +2353,7 @@ input[type='checkbox'] {
 .header {
   display: grid;
   grid-template-areas: 'heading icons left-icons';
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1fr 2fr 2fr;
   align-items: center;
 }
 
