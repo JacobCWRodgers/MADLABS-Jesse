@@ -14,15 +14,15 @@
     <!-- Grape Image + Resveratrol Text -->
     <div class="vinia-1000-image-text">
       {% if section.settings.grape_image %}
+        <p class="vinia-1000-resveratrol-text">
+          {{ section.settings.resveratrol_text }}
+        </p>
         <img
           class="vinia-1000-image"
           src="{{ section.settings.grape_image | img_url: 'master' }}"
           alt="Red Grape Powder"
         >
       {% endif %}
-      <p class="vinia-1000-resveratrol-text">
-        {{ section.settings.resveratrol_text }}
-      </p>
     </div>
 
     <!-- Stats Row -->
