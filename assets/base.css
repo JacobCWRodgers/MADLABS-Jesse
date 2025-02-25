@@ -1181,6 +1181,7 @@ deferred-media {
     width: fit-content;
     padding: 10px 3rem;
     margin: 10px auto;
+    border-radius: 100%;
     
 }
 
