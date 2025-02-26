@@ -1235,7 +1235,17 @@ deferred-media {
   border-radius: 30px;
   position: relative;
   text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
 }
+
+.brand-button:hover {
+  background-color: #ffc040; /* Slightly darker yellow */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px); /* Subtle lift effect */
+}
+
+
 .brand-button span {
   display: block;
   margin-right: 34px;
