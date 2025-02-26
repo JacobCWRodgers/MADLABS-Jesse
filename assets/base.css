@@ -2429,8 +2429,7 @@ input[type="checkbox"] {
   .header--top-left,
   .header--middle-left:not(.header--has-menu) {
     grid-template-areas:
-      "heading icons"
-      "navigation navigation";
+      "heading " " navigation icons";
     grid-template-columns: 1fr auto;
   }
 
