@@ -45,10 +45,15 @@
         "cta_text": "Get Your VINIA",
         "cta_link": ""
       }
+    },
+    "card_layout_afGqzP": {
+      "type": "card-layout",
+      "settings": {}
     }
   },
   "order": [
     "hero_L7X6xw",
-    "benefits_ykLcm3"
+    "benefits_ykLcm3",
+    "card_layout_afGqzP"
   ]
 }
