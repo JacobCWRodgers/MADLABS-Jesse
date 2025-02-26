@@ -64,11 +64,27 @@
             "text": "More Oxygen and Nutrient Delivery",
             "icon": "shopify://shop_images/Vector.svg"
           }
+        },
+        "card_qnqPbw": {
+          "type": "card",
+          "settings": {
+            "text": "More Physical Energy"
+          }
+        },
+        "card_YrNEXq": {
+          "type": "card",
+          "settings": {
+            "background_image": "shopify://shop_images/Group_1103.png",
+            "text": "More Physical Energy",
+            "icon": "shopify://shop_images/Group_1033.svg"
+          }
         }
       },
       "block_order": [
         "card_JUfktV",
-        "card_arFbBn"
+        "card_arFbBn",
+        "card_qnqPbw",
+        "card_YrNEXq"
       ],
       "settings": {}
     }
