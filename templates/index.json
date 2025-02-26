@@ -20,7 +20,7 @@
         "button_link_target": "_self",
         "button_label": "Get your VINIA",
         "footer_note": "For 2 people or twice daily for High Performers & Athletes",
-        "background_color": "#7a194a",
+        "background_color": "linear-gradient(293.43deg, rgba(111, 22, 69, 1) 19.77%, rgba(136, 32, 87, 1) 80.23%)",
         "text_color": "#ffffff",
         "mobile_image": "shopify://shop_images/Supplement_2Bottles_1Box_90cps_alpha_2_2.png",
         "mobile_image_alt": "Mobile banner image",
