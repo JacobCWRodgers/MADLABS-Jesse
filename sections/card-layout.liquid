@@ -1,6 +1,134 @@
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "Cards Carousel",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "background_image",
+          "label": "Background Image"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Card Text",
+          "default": "More Physical Energy"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Cards Carousel",
+      "category": "Custom"
+    }
+  ]
+}
 {% endschema %}
+
+<style>
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  .carousel {
+    display: none;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .carousel .card {
+    display: inline-block;
+    width: 100%;
+  }
+  @media (max-width: 768px) {
+    .cards-container {
+      display: none;
+    }
+    .carousel {
+      display: block;
+    }
+  }
+  .card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+  }
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+  .card-content {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 6px;
+  }
+</style>
+
+<div class="cards-container">
+  {% for block in section.blocks %}
+    <div class="card" style="background-image: url('{{ block.settings.background_image | img_url: 'large' }}');">
+      <div class="card-content">
+        <img src="{{ block.settings.icon | img_url: 'small' }}" alt="Icon">
+        <p>{{ block.settings.text }}</p>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+<div class="carousel">
+  <div class="carousel-inner">
+    {% for block in section.blocks %}
+      <div class="card" style="background-image: url('{{ block.settings.background_image | img_url: 'large' }}');">
+        <div class="card-content">
+          <img src="{{ block.settings.icon | img_url: 'small' }}" alt="Icon">
+          <p>{{ block.settings.text }}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    if (window.innerWidth <= 768) {
+      const carousel = document.querySelector('.carousel-inner');
+      let isDown = false;
+      let startX;
+      let scrollLeft;
+      
+      carousel.addEventListener('mousedown', (e) => {
+        isDown = true;
+        startX = e.pageX - carousel.offsetLeft;
+        scrollLeft = carousel.scrollLeft;
+      });
+      carousel.addEventListener('mouseleave', () => {
+        isDown = false;
+      });
+      carousel.addEventListener('mouseup', () => {
+        isDown = false;
+      });
+      carousel.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - carousel.offsetLeft;
+        const walk = (x - startX) * 2;
+        carousel.scrollLeft = scrollLeft - walk;
+      });
+    }
+  });
+</script>
