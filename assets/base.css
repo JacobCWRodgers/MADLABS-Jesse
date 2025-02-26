@@ -1189,19 +1189,19 @@ deferred-media {
 /* Button - default */
 
 .brand-button {
-  display: flex;
-  justify-content: end;
+  display: block;
   background-color: #ffd568;
   color: #6f1645;
   width: fit-content;
-  padding: 10px 3rem;
+  padding: 10px 3em;
   margin: 10px auto;
   border-radius: 30px;
   position: relative;
   text-decoration: none;
 }
 .brand-button span {
-  margin: 0 35px;
+  display: block;
+  margin-right: 34px;
   font-size: 16px;
 }
 .brand-button .button_icon {
