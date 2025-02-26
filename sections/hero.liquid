@@ -180,22 +180,26 @@
       .mobile-image { display: none; }
       .desktop-image { display: block; }
 
-
+   .banner-content {
+        display: grid;
+        text-align: left;
+        margin-top: 0;
+      }
     .banner-tagline {
-      grid-template-area: 'tagline';
+      grid-template-areas: 'tagline';
     }
       .banner-headline {
-      grid-template-area: 'headline';
+      grid-template-areas: 'headline';
     }
 
 
       .offer-amount {
-      grid-template-area: 'offer';
+      grid-template-areas: 'offer';
     }
       .offer-details {
-      grid-template-area: 'details';
+      grid-template-areas: 'details';
     }
-      
+
       .banner-wrapper {
         flex-wrap: nowrap;
         justify-content: space-between;
@@ -206,11 +210,7 @@
       .banner-content {
         width: 100%;
       }
-      .banner-content {
-        display: grid;
-        text-align: left;
-        margin-top: 0;
-      }
+
     }
 </style>
 
