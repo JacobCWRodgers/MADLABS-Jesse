@@ -6,6 +6,7 @@
     {
       "type": "card",
       "name": "Card",
+      "limit": 10,
       "settings": [
         {
           "type": "image_picker",
@@ -29,7 +30,12 @@
   "presets": [
     {
       "name": "Cards Carousel",
-      "category": "Custom"
+      "category": "Custom",
+      "blocks": [
+        { "type": "card" },
+        { "type": "card" },
+        { "type": "card" }
+      ]
     }
   ]
 }
@@ -110,7 +116,7 @@
       let isDown = false;
       let startX;
       let scrollLeft;
-      
+
       carousel.addEventListener('mousedown', (e) => {
         isDown = true;
         startX = e.pageX - carousel.offsetLeft;

@@ -48,6 +48,19 @@
     },
     "card_layout_afGqzP": {
       "type": "card-layout",
+      "blocks": {
+        "card_JUfktV": {
+          "type": "card",
+          "settings": {
+            "background_image": "shopify://shop_images/Group_1102.png",
+            "text": "More Mental Alertness",
+            "icon": "shopify://shop_images/Group.svg"
+          }
+        }
+      },
+      "block_order": [
+        "card_JUfktV"
+      ],
       "settings": {}
     }
   },
