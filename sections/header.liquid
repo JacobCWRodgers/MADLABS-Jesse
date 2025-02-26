@@ -230,13 +230,14 @@ base.css
           rel="nofollow"
         >
           {%- if section.settings.enable_customer_avatar -%}
-            <account-icon>
+            <!-- <account-icon>
               {%- if customer and customer.has_avatar? -%}
                 {{ customer | avatar }}
               {%- else -%}
                 <span class="svg-wrapper">{{ 'icon-account.svg' | inline_asset_content }}</span>
               {%- endif -%}
-            </account-icon>
+            </account-icon> -->
+          
           {%- else -%}
             <span class="svg-wrapper">{{ 'icon-account.svg' | inline_asset_content }}</span>
           {%- endif -%}
