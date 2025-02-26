@@ -9,6 +9,39 @@
     0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
 
+@font-face {
+    font-family: 'FrankRuhlLibre';
+    src: url('{{ "FrankRuhlLibre-Black.ttf" | asset_url }}') format('truetype');
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'FrankRuhlLibre';
+    src: url('{{ "FrankRuhlLibre-Bold.ttf" | asset_url }}') format('truetype');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'FrankRuhlLibre';
+    src: url('{{ "FrankRuhlLibre-Medium.ttf" | asset_url }}') format('truetype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'FrankRuhlLibre';
+    src: url('{{ "FrankRuhlLibre-Regular.ttf" | asset_url }}') format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'FrankRuhlLibre';
+    src: url('{{ "FrankRuhlLibre-Light.ttf" | asset_url }}') format('truetype');
+    font-weight: 300;
+}
+
+
+
+
 .product-card-wrapper .card,
 .contains-card--product {
   --border-radius: var(--product-card-corner-radius);
@@ -265,7 +298,7 @@ h5,
 .h3,
 .h4,
 .h5 {
-  font-family: var(--font-heading-family);
+  font-family: 'FrankRuhlLibre', sans-serif;
   font-style: var(--font-heading-style);
   font-weight: var(--font-heading-weight);
   letter-spacing: calc(var(--font-heading-scale) * 0.06rem);
