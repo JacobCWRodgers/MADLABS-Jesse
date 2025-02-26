@@ -69,121 +69,119 @@
 </section>
 
 <style>
-     #heart-health-banner {
-      position: relative;
-      height: 100%;
-      padding: 4em 20px;
-      background: {{ section.settings.background_color }};
-      color: {{ section.settings.text_color }};
-    }
+       #heart-health-banner {
+    position: relative;
+    height: 100%;
+    padding: 4em 1.25rem;
+    background: {{ section.settings.background_color }};
+    color: {{ section.settings.text_color }};
+  }
 
+  #background-radiant {
+    display: block;
+    position: absolute;
+    width: 80vw;
+    height: 72%;
+    background-color: #590732;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 21.28rem;
+  }
+
+  @media screen and (max-width: 25rem) {
     #background-radiant {
-      display: block;
-      position: absolute;
-      width: 80vw;
-      height: 72%;
-      background-color: #590732;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      border-radius: 340.5px;
+      display: none;
     }
+  }
 
-    @media screen and (max-width: 400px){
-      #background-radiant {
-        display: none;
-      }
-    }
+  .banner-wrapper {
+    max-width: 75rem;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
 
-      .banner-wrapper {
-        max-width: 1200px;
-        margin: 0 auto;
-        position: relative;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-      }
+  .banner-image {
+    width: 100%;
+    text-align: center;
+  }
 
-      /* Images */
-      .banner-image {
-        width: 100%;
-        text-align: center;
-      }
-      .banner-image img {
-        max-width: 100%;
-        height: auto;
-        display: block;
-        margin: 0 auto;
-      }
+  .banner-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
 
-      /* Hide desktop image on mobile, hide mobile image on desktop */
-      .mobile-image { display: block; }
-      .desktop-image { display: none; }
+  .mobile-image { display: block; }
+  .desktop-image { display: none; }
 
-      /* Content area */
-      .banner-content {
-        width: 100%;
-        text-align: center;
-        margin-top: 20px;
-      }
-      #heart-health-banner .banner-tagline {
-        margin: 0 0 15px 0;
-        font-size: 38.35px;
-        line-height: 45px;
-        text-transform: capitalize;
-        color: white;
-        font-weight: 400;
-        text-align: center;
-      }
-      .banner-headline {
-        text-align: center;
-        margin: 10px 0 0 0;
-        font-size: 20px;
-        line-height: 22px;
-        color: white;
-        line-height: 1.2em;
-        padding: 0 1.4em;
-      }
-      .banner-subheading {
-        margin: 10px 0;
-        font-size: 1.2rem;
-      }
-      .offer-amount {
-        margin: -32px 0;
-        font-size: 88px;
-        font-weight: 400;
-        text-align: center;
-      }
+  .banner-content {
+    width: 100%;
+    text-align: center;
+    margin-top: 1.25rem;
+  }
 
-      .offer-details {
-        margin: 0;
-        padding: 0 50px;
-        font-size: 16px;
-        font-weight: 400;
-        text-align: center;
-      }
+  #heart-health-banner .banner-tagline {
+    margin: 0 0 0.9375rem 0;
+    font-size: 2.4rem;
+    line-height: 2.8125rem;
+    text-transform: capitalize;
+    color: white;
+    font-weight: 400;
+    text-align: center;
+  }
 
-      .banner-footer-note {
-        margin-top: 15px;
-        font-size: 20px;
-        font-weight: 700;
-        line-height: 22px;
-        text-align: center;
+  .banner-headline {
+    text-align: center;
+    margin: 0.625rem 0 0 0;
+    font-size: 1.25rem;
+    line-height: 1.375rem;
+    color: white;
+    line-height: 1.2em;
+    padding: 0 1.4em;
+  }
 
-      }
+  .banner-subheading {
+    margin: 0.625rem 0;
+    font-size: 1.2rem;
+  }
 
+  .offer-amount {
+    margin: -2rem 0;
+    font-size: 5.5rem;
+    font-weight: 400;
+    text-align: center;
+  }
 
+  .offer-details {
+    margin: 0;
+    padding: 0 3.125rem;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+  }
 
-      /* Desktop responsive */
-      @media (min-width: 768px) {
-        .mobile-image { display: none; }
-        .desktop-image { display: block; }
+  .banner-footer-note {
+    margin-top: 0.9375rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.375rem;
+    text-align: center;
+  }
 
-     .banner-content {
+  @media (min-width: 48rem) {
+    .mobile-image { display: none; }
+    .desktop-image { display: block; }
+
+    .banner-content {
       display: grid;
       margin-top: 0;
-       gap:0;
+      gap: 0;
       grid-template-columns: 1fr 1fr;
       grid-template-areas:
           "tagline tagline tagline"
@@ -191,78 +189,77 @@
           "offer offer offer"
           "details details button"
           "footer footer footer";
-  }
+    }
 
-  .banner-content .banner-tagline {
+    .banner-content .banner-tagline {
       grid-area: tagline;
-    font-size: 38.35px;
-    margin: 0 !important;
-    text-align: right !important;
+      font-size: 2.4rem;
+      margin: 0 !important;
+      text-align: right !important;
+    }
+
+    .banner-headline {
+      grid-area: headline;
+      font-size: 1.5625rem;
+      margin: 0;
+      padding: 0;
+      text-align: right !important;
+    }
+
+    .brand-button {
+      grid-area: button;
+      font-size: 1.375rem;
+      padding: 0.3125rem 1.1em;
+      margin-right: 0%;
+    }
+
+    .brand-button span {
+      font-weight: 700;
+      font-size: 1.375rem;
+    }
+
+    .offer-amount {
+      grid-area: offer;
+      font-size: 10.08rem;
+      line-height: 100%;
+      margin: 0;
+      padding: 0;
+      text-align: right !important;
+    }
+
+    .offer-details {
+      grid-area: details;
+      text-align: right;
+      font-size: 1.5rem;
+      line-height: 1.625rem;
+      margin: 0;
+      padding: 0 1.875rem;
+      text-align: right !important;
+      align-self: center;
+      margin-right: -2.8125rem;
+      width: 100%;
+    }
+
+    .banner-footer-note {
+      grid-area: footer;
+      font-size: 1.125rem;
+      margin: 0;
+      padding: 0;
+      text-align: right !important;
+    }
+
+    .banner-wrapper {
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+      max-width: 72vw;
+    }
+
+    .banner-image,
+    .banner-content {
+      width: 100%;
+    }
   }
-
-  .banner-headline {
-    grid-area: headline;
-    font-size: 25px;
-    margin: 0;
-    padding: 0;
-    text-align: right !important;
-  }
-
-  .brand-button {
-    grid-area: button;
-    font-size: 22px;
-    padding: 5px 1.1em;
-    margin-right: 0%;
-  }
-
-  .brand-button span {
-    font-weight: 700;
-    font-size: 22px;
-  }
-
-  .offer-amount {
-    grid-area: offer;
-    font-size: 161.32px;
-    line-height: 100%;
-    margin: 0;
-    padding: 0;
-    text-align: right !important;
-  }
-
-  .offer-details {
-    grid-area: details;
-    text-align: right;
-    font-size: 24px;
-    line-height: 26px;
-    margin: 0;
-    padding: 0 30px;
-    text-align: right !important;
-    align-self: center;
-    margin-right: -45px;
-    width: 100%;
-  }
-
-  .banner-footer-note {
-    grid-area: footer;
-    font-size: 18px;
-    margin: 0;
-    padding: 0;
-    text-align: right !important;
-  }
-
-
-        .banner-wrapper {
-          flex-wrap: nowrap;
-          justify-content: space-between;
-          flex-direction: row-reverse;
-          max-width:72vw;
-        }
-        .banner-image,
-        .banner-content {
-          width: 100%;
-        }
-
-      }
 </style>
 
 {% schema %}
