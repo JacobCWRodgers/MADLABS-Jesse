@@ -84,20 +84,8 @@
     border-radius: 6px;
   }
 </style>
-
-<div class="cards-container">
-  {% for block in section.blocks %}
-    <div class="card" style="background-image: url('{{ block.settings.background_image | img_url: 'large' }}');">
-      <div class="card-content">
-        <img src="{{ block.settings.icon | img_url: 'small' }}" alt="Icon">
-        <p>{{ block.settings.text }}</p>
-      </div>
-    </div>
-  {% endfor %}
-</div>
-
-<div class="carousel">
-  <div class="carousel-inner">
+<div style="max-width: 800px;">
+  <div class="cards-container">
     {% for block in section.blocks %}
       <div class="card" style="background-image: url('{{ block.settings.background_image | img_url: 'large' }}');">
         <div class="card-content">
@@ -107,7 +95,20 @@
       </div>
     {% endfor %}
   </div>
-</div>
+  
+  <div class="carousel">
+    <div class="carousel-inner">
+      {% for block in section.blocks %}
+        <div class="card" style="background-image: url('{{ block.settings.background_image | img_url: 'large' }}');">
+          <div class="card-content">
+            <img src="{{ block.settings.icon | img_url: 'small' }}" alt="Icon">
+            <p>{{ block.settings.text }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  </div>
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
