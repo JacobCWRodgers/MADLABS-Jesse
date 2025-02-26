@@ -68,7 +68,7 @@
           <a>Read Clinicals</a>
           <a
             href="{{ section.settings.button_link }}"
-            class="brand-button"
+            class="brand-buttons"
             target="{{ section.settings.button_link_target }}"
           >
             <span>Get Your VINIA</span>
@@ -287,11 +287,22 @@
             align-items: center;
           }
         }
+  .brand-buttons {
+    grid-area: button;
+    font-size: 22px;
+    padding: 5px 1.1em;
+    margin-right: 0%;
+  }
 
+  .brand-buttons span {
+    font-weight: 700;
+    font-size: 22px;
+  }
 
 .links {
   display: flex; 
   flex-wrap: wrap;
+  
 }
     
         @media (max-width: 768px) {
