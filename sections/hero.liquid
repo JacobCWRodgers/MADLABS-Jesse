@@ -4,8 +4,8 @@
     <div class="banner-image desktop-image">
       {% if section.settings.desktop_image %}
         <img
-          width="100"
-          height="100"
+          width="100%"
+          height="100%"
           src="{{ section.settings.desktop_image | img_url: 'x720' }}"
           alt="{{ section.settings.desktop_image_alt | escape }}"
         >
@@ -188,7 +188,7 @@
       }
       .banner-image,
       .banner-content {
-        width: 500px;
+        width: 100%;
       }
       .banner-content {
         text-align: left;
