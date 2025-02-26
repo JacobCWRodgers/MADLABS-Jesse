@@ -2565,9 +2565,6 @@ input[type="checkbox"] {
 /* Header icons */
 .header__icons {
   display: flex;
-  grid-area: icons;
-  justify-self: end;
-  padding-right: 0.8rem;
   align-items: center;
   gap: 15px;
 }
