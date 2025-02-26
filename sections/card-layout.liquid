@@ -84,7 +84,7 @@
     border-radius: 6px;
   }
 </style>
-<div style="max-width: 800px;">
+<div style="max-width: 800px; margin: 0 auto;">
   <div class="cards-container">
     {% for block in section.blocks %}
       <div class="card" style="background-image: url('{{ block.settings.background_image | img_url: 'large' }}');">
