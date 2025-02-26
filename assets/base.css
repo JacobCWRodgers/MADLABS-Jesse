@@ -1210,6 +1210,14 @@ deferred-media {
   top: 7px;
 }
 
+@media (min-width: 700px) {
+  .brand-button .button_icon {
+      top: 4px;
+    }
+}
+
+
+
 .button--secondary,
 .button--tertiary {
   --color-button: var(--color-secondary-button);
