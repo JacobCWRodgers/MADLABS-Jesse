@@ -3778,11 +3778,16 @@ details-disclosure > details {
   border: 1px solid #6f1645;
   border-radius: 22px;
   padding: 12px 30px;
+  background-color: transparent;
+  color: #6f1645;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 #HeaderMenu-sign-in:hover {
   background-color: #FFD568;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
 }
+
 
 
 
