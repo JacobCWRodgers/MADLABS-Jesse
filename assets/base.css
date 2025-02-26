@@ -3779,3 +3779,10 @@ details-disclosure > details {
   border-radius: 22px;
   padding: 12px 30px;
 }
+
+#HeaderMenu-sign-in:hover {
+  background-color: ##FFD568
+}
+
+
+
