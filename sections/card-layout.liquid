@@ -113,7 +113,7 @@
 
 <div class="cards-container">
   {% for block in section.blocks %}
-    <div class="card" style="background: norepeat; background-image: url('{{ block.settings.background_image | img_url: 'large' }}');">
+    <div class="card" style="background-repeat: no-repeat; background-image: url('{{ block.settings.background_image | img_url: 'large' }}');">
       <div class="card-content">
         <img src="{{ block.settings.icon | img_url: 'small' }}" alt="Icon">
         <p>{{ block.settings.text }}</p>
