@@ -1193,7 +1193,7 @@ deferred-media {
   background-color: #ffd568;
   color: #6f1645;
   width: fit-content;
-  padding: 10px 3em;
+  padding: 5px 1em;
   margin: 10px auto;
   border-radius: 30px;
   position: relative;
@@ -1208,12 +1208,6 @@ deferred-media {
   position: absolute;
   right: 5px;
   top: 7px;
-}
-
-@media (min-width: 700px) {
-  .brand-button .button_icon {
-      top: 4px;
-    }
 }
 
 
