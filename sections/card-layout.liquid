@@ -122,11 +122,12 @@
   {% endfor %}
 </div>
 
+<!-- Mobile -->
 <div class="carousel">
   <button class="prev-btn"></button>
   <div class="carousel-inner">
     {% for block in section.blocks %}
-      <div class="card" style="background-repeat: no-repeat; background-image: url('{{ block.settings.background_image | img_url: 'large' }}');">
+      <div class="card" style="margin: 0 auto; background-repeat: no-repeat; background-image: url('{{ block.settings.background_image | img_url: 'large' }}');">
         <div class="card-content">
           <img src="{{ block.settings.icon | img_url: 'small' }}" alt="Icon">
           <p>{{ block.settings.text }}</p>
