@@ -1207,8 +1207,13 @@ deferred-media {
 .brand-button .button_icon {
   position: absolute;
   right: 5px;
-  top: 6px;
+  max-width: 30px;
+  top: 3px;
 }
+}
+
+
+
 
 
 
