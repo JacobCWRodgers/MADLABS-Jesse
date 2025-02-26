@@ -56,10 +56,19 @@
             "text": "More Mental Alertness",
             "icon": "shopify://shop_images/Group.svg"
           }
+        },
+        "card_arFbBn": {
+          "type": "card",
+          "settings": {
+            "background_image": "shopify://shop_images/Group_1101.png",
+            "text": "More Oxygen and Nutrient Delivery",
+            "icon": "shopify://shop_images/Vector.svg"
+          }
         }
       },
       "block_order": [
-        "card_JUfktV"
+        "card_JUfktV",
+        "card_arFbBn"
       ],
       "settings": {}
     }
