@@ -69,162 +69,168 @@
 </section>
 
 <style>
-   #heart-health-banner {
-    position: relative;
-    height: 100%;
-    padding: 4em 20px;
-    background: {{ section.settings.background_color }};
-    color: {{ section.settings.text_color }};
-  }
-
-  #background-radiant {
-    display: block;
-    position: absolute;
-    width: 80vw;
-    height: 75%;
-    background-color: #590732;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 230.5px;
-  }
-
-  @media screen and (max-width: 400px){
-    #background-radiant {
-      display: none;
-    }
-  }
-
-    .banner-wrapper {
-      max-width: 1200px;
-      margin: 0 auto;
+     #heart-health-banner {
       position: relative;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
+      height: 100%;
+      padding: 4em 20px;
+      background: {{ section.settings.background_color }};
+      color: {{ section.settings.text_color }};
     }
 
-    /* Images */
-    .banner-image {
-      width: 100%;
-      text-align: center;
-    }
-    .banner-image img {
-      max-width: 100%;
-      height: auto;
+    #background-radiant {
       display: block;
-      margin: 0 auto;
+      position: absolute;
+      width: 80vw;
+      height: 75%;
+      background-color: #590732;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 230.5px;
     }
 
-    /* Hide desktop image on mobile, hide mobile image on desktop */
-    .mobile-image { display: block; }
-    .desktop-image { display: none; }
-
-    /* Content area */
-    .banner-content {
-      width: 100%;
-      text-align: center;
-      margin-top: 20px;
-    }
-    #heart-health-banner .banner-tagline {
-      margin: 0 0 15px 0;
-      font-size: 38.35px;
-      line-height: 45px;
-      text-transform: capitalize;
-      color: white;
-      font-weight: 400;
-      text-align: center;
-    }
-    .banner-headline {
-      text-align: center;
-      margin: 10px 0 0 0;
-      font-size: 20px;
-      line-height: 22px;
-      color: white;
-      line-height: 1.2em;
-      padding: 0 1.4em;
-    }
-    .banner-subheading {
-      margin: 10px 0;
-      font-size: 1.2rem;
-    }
-    .offer-amount {
-      margin: -32px 0;
-      font-size: 88px;
-      font-weight: 400;
-      text-align: center;
-    }
-
-    .offer-details {
-      margin: 0;
-      padding: 0 50px;
-      font-size: 16px;
-      font-weight: 400;
-      text-align: center;
-    }
-
-    .banner-footer-note {
-      margin-top: 15px;
-      font-size: 20px;
-      font-weight: 700;
-      line-height: 22px;
-      text-align: center;
-
-    }
-
-
-
-    /* Desktop responsive */
-    @media (min-width: 768px) {
-      .mobile-image { display: none; }
-      .desktop-image { display: block; }
-
-   .banner-content {
-        display: grid;
-        text-align: left;
-        margin-top: 0;
-     grid-template:
-        "tagline tagline tagline"
-       "headline headline headline"
-       "offer offer offer"
-       "details button" auto
-     "footer" auto;
+    @media screen and (max-width: 400px){
+      #background-radiant {
+        display: none;
       }
-    .banner-tagline {
-      grid-area: 'tagline';
-    }
-      .banner-headline {
-      grid-area: 'headline';
-    }
-
-      .brand-button {
-      grid-area: 'button';
-    }
-
-      .offer-amount {
-      grid-area: 'offer';
-    }
-      .offer-details {
-      grid-area: 'details';
-    }
-
-      .banner-footer-note {
-      grid-area: 'footer';
     }
 
       .banner-wrapper {
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        flex-direction: row-reverse;
-        max-width:72vw;
-      }
-      .banner-image,
-      .banner-content {
-        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
       }
 
-    }
+      /* Images */
+      .banner-image {
+        width: 100%;
+        text-align: center;
+      }
+      .banner-image img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+      }
+
+      /* Hide desktop image on mobile, hide mobile image on desktop */
+      .mobile-image { display: block; }
+      .desktop-image { display: none; }
+
+      /* Content area */
+      .banner-content {
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+      }
+      #heart-health-banner .banner-tagline {
+        margin: 0 0 15px 0;
+        font-size: 38.35px;
+        line-height: 45px;
+        text-transform: capitalize;
+        color: white;
+        font-weight: 400;
+        text-align: center;
+      }
+      .banner-headline {
+        text-align: center;
+        margin: 10px 0 0 0;
+        font-size: 20px;
+        line-height: 22px;
+        color: white;
+        line-height: 1.2em;
+        padding: 0 1.4em;
+      }
+      .banner-subheading {
+        margin: 10px 0;
+        font-size: 1.2rem;
+      }
+      .offer-amount {
+        margin: -32px 0;
+        font-size: 88px;
+        font-weight: 400;
+        text-align: center;
+      }
+
+      .offer-details {
+        margin: 0;
+        padding: 0 50px;
+        font-size: 16px;
+        font-weight: 400;
+        text-align: center;
+      }
+
+      .banner-footer-note {
+        margin-top: 15px;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 22px;
+        text-align: center;
+
+      }
+
+
+
+      /* Desktop responsive */
+      @media (min-width: 768px) {
+        .mobile-image { display: none; }
+        .desktop-image { display: block; }
+
+     .banner-content {
+      display: grid;
+      text-align: left;
+      margin-top: 0;
+      grid-template-columns: 1fr 1fr 1fr; /* Adjust the columns */
+      grid-template-rows: auto auto auto auto auto; /* Define row heights */
+      grid-template-areas:
+          "tagline tagline tagline"
+          "headline headline headline"
+          "offer offer offer"
+          "details button button"
+          "footer footer footer";
+  }
+
+  .banner-tagline {
+      grid-area: tagline;
+  }
+
+  .banner-headline {
+      grid-area: headline;
+  }
+
+  .brand-button {
+      grid-area: button;
+  }
+
+  .offer-amount {
+      grid-area: offer;
+  }
+
+  .offer-details {
+      grid-area: details;
+  }
+
+  .banner-footer-note {
+      grid-area: footer;
+  }
+
+
+        .banner-wrapper {
+          flex-wrap: nowrap;
+          justify-content: space-between;
+          flex-direction: row-reverse;
+          max-width:72vw;
+        }
+        .banner-image,
+        .banner-content {
+          width: 100%;
+        }
+
+      }
 </style>
 
 {% schema %}
