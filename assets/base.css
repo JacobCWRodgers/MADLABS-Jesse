@@ -3709,9 +3709,8 @@ details-disclosure > details {
   }
 }
 
-
 #HeaderMenu-sign-in {
-  border: 1px solid #6F1645;
+  border: 1px solid #6f1645;
   border-radius: 22px;
+  padding: 12px 30px;
 }
-
