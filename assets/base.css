@@ -129,6 +129,7 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
   .header:not(.drawer-menu).page-width {
     padding-left: 0px;
     padding-right: 0px;
+    width: 90vw
   }
 
   .page-width--narrow {
