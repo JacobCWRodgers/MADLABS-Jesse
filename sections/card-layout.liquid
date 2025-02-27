@@ -102,13 +102,14 @@
     border-radius: 6px;
     width: calc(100% - 20px);
   }
+  /* Updated controls: now at the bottom of the card */
   .carousel-buttons {
     position: absolute;
-    top: 50%;
+    bottom: 10px;
+    left: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    transform: translateY(-50%);
   }
   .carousel-buttons button {
     background: url('{{ 'Group 189.png' | asset_url }}') no-repeat center center;
