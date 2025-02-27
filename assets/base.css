@@ -1224,13 +1224,11 @@ deferred-media {
 
 /* component-button */
 /* Button - default */
-
 .brand-button {
-  display: block;
+  display: inline-block;
   background-color: #ffd568;
   color: #6f1645;
-  width: fit-content;
-  padding: 5px 1em;
+  padding: 5px 1.5em;
   margin: 10px auto;
   border-radius: 30px;
   position: relative;
@@ -1240,31 +1238,31 @@ deferred-media {
 }
 
 .brand-button:hover {
-  background-color: #ffc040; /* Slightly darker yellow */
+  background-color: #ffc040;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  transform: translateY(-2px); /* Subtle lift effect */
+  transform: translateY(-2px);
 }
-
 
 .brand-button span {
-  display: block;
-  margin-right: 34px;
+  display: inline-block;
+  margin-right: 30px;
   font-size: 20px !important;
 }
+
 .brand-button .button_icon {
   position: absolute;
-  right: 5px;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
   max-width: 30px;
-  top: 3px;
 }
-
 
 @media screen and (min-width: 700px) {
-  .brand-button .button_icon{
-      bottom: 1px;
-      top: 2px;
+  .brand-button .button_icon {
+    right: 20px;
   }
 }
+
 
 
 
