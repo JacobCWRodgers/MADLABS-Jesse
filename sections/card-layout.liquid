@@ -211,38 +211,59 @@
 </div>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
+      document.addEventListener('DOMContentLoaded', function () {
     if (window.innerWidth <= 768) {
       const carousel = document.querySelector('.carousel-inner');
       const prevBtn = document.querySelector('.prev-btn');
       const nextBtn = document.querySelector('.next-btn');
-      let isDown = false;
-      let startX;
-      let scrollLeft;
 
-      // Touch support
+      // Set up proper scrolling behavior
+      carousel.style.overflowX = 'scroll';
+      carousel.style.scrollSnapType = 'x mandatory';
+
+      // Configure cards for smooth scrolling
+      const cards = carousel.querySelectorAll('.card');
+      cards.forEach(card => {
+        card.style.scrollSnapAlign = 'start';
+      });
+
+      // Button navigation
+      prevBtn.addEventListener('click', () => {
+        const cardWidth = cards[0].offsetWidth;
+        carousel.scrollBy({
+          left: -cardWidth,
+          behavior: 'smooth'
+        });
+      });
+
+      nextBtn.addEventListener('click', () => {
+        const cardWidth = cards[0].offsetWidth;
+        carousel.scrollBy({
+          left: cardWidth,
+          behavior: 'smooth'
+        });
+      });
+
+      // Touch/swipe handling
+      let startX, scrollLeft;
+      let isDown = false;
+
       carousel.addEventListener('touchstart', (e) => {
         isDown = true;
         startX = e.touches[0].pageX - carousel.offsetLeft;
         scrollLeft = carousel.scrollLeft;
       });
 
-      carousel.addEventListener('touchend', () => {
-        isDown = false;
-      });
-
       carousel.addEventListener('touchmove', (e) => {
         if (!isDown) return;
+        e.preventDefault();
         const x = e.touches[0].pageX - carousel.offsetLeft;
-        const walk = (x - startX) * 2;
+        const walk = (x - startX) * 1.5; // Increased sensitivity
         carousel.scrollLeft = scrollLeft - walk;
       });
 
-      prevBtn.addEventListener('click', () => {
-        carousel.scrollBy({ left: -carousel.offsetWidth, behavior: 'smooth' });
-      });
-      nextBtn.addEventListener('click', () => {
-        carousel.scrollBy({ left: carousel.offsetWidth, behavior: 'smooth' });
+      carousel.addEventListener('touchend', () => {
+        isDown = false;
       });
     }
   });
