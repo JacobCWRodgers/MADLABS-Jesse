@@ -42,120 +42,122 @@
 {% endschema %}
 
 <style>
-  /* Desktop grid: 3 cards per row */
-  .cards-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-
-  /* Mobile carousel container is hidden on desktop */
-  .carousel {
-    display: none;
-    overflow: hidden;
-    white-space: nowrap;
-    position: relative;
-    -webkit-overflow-scrolling: touch; /* For smoother scrolling on iOS */
-  scroll-behavior: smooth;
-  }
-
-  /* Carousel inner: add right padding for 20px overhang */
-  .carousel-inner {
-    padding-right: 20px;
-  }
-
-  /* Mobile carousel card: reduce width to allow next card to peek (20px overhang) */
-  .carousel .card {
-    display: inline-block;
-    width: calc(100% - 20px);
-    margin: 0 15px 0 6px;
-    vertical-align: top;
-  }
-
-  /* Show carousel only on mobile screens */
-  @media (max-width: 768px) {
+    /* Desktop grid: 3 cards per row */
     .cards-container {
-      display: none;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
     }
+
+    /* Mobile carousel container is hidden on desktop */
     .carousel {
-      display: block;
+      display: none;
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+      -webkit-overflow-scrolling: touch; /* For smoother scrolling on iOS */
+    scroll-behavior: smooth;
+      padding: 5vh 10px;
+  }
     }
-  }
 
-  .card {
-    color: #6F1645;
-    position: relative;
-    font-weight: 700;
-    line-height: 21.79px;
-    border-radius: 12px;
-    overflow: hidden;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 50vh;
-  }
-  .card img {
-    width: 40px;
-    height: auto;
-    object-fit: contain;
-  }
+    /* Carousel inner: add right padding for 20px overhang */
+    .carousel-inner {
+      padding-right: 20px;
+    }
 
-  /* Card content: positioned at bottom-left with left-aligned text */
-  .card-content {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 10px;
-    border-radius: 6px;
-    width: calc(100% - 20px);
-    text-align: left;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-  }
+    /* Mobile carousel card: reduce width to allow next card to peek (20px overhang) */
+    .carousel .card {
+      display: inline-block;
+      width: calc(100% - 20px);
+      margin: 0 15px 0 6px;
+      vertical-align: top;
+    }
 
-  /* Navigation buttons (unchanged) */
-  .carousel-buttons {
-    margin-top: 50px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 120px;
-  }
-  .carousel-buttons button {
-    background: url('{{ 'Group 189.png' | asset_url }}') no-repeat center center;
-    background-size: contain;
-    border: none;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    outline: none;
-  }
+    /* Show carousel only on mobile screens */
+    @media (max-width: 768px) {
+      .cards-container {
+        display: none;
+      }
+      .carousel {
+        display: block;
+      }
+    }
 
-  .heading_text {
-    text-align: center;
-    padding: 10px 8vw;
-  }
-  .heading_text h4 {
-    color: #6F1645;
-    font-size: 50px;
-  }
+    .card {
+      color: #6F1645;
+      position: relative;
+      font-weight: 700;
+      line-height: 21.79px;
+      border-radius: 12px;
+      overflow: hidden;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 50vh;
+    }
+    .card img {
+      width: 40px;
+      height: auto;
+      object-fit: contain;
+    }
 
-  .desktop_text {
-    display: none;
-  }
+    /* Card content: positioned at bottom-left with left-aligned text */
+    .card-content {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 10px;
+      border-radius: 6px;
+      width: calc(100% - 20px);
+      text-align: left;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
 
-  @media screen and (min-width: 700px) {
-    .mobile_text {
+    /* Navigation buttons (unchanged) */
+    .carousel-buttons {
+      margin-top: 50px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 120px;
+    }
+    .carousel-buttons button {
+      background: url('{{ 'Group 189.png' | asset_url }}') no-repeat center center;
+      background-size: contain;
+      border: none;
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .heading_text {
+      text-align: center;
+      padding: 10px 8vw;
+    }
+    .heading_text h4 {
+      color: #6F1645;
+      font-size: 50px;
+    }
+
+    .desktop_text {
       display: none;
     }
-    .desktop_text {
-      display: block;
+
+    @media screen and (min-width: 700px) {
+      .mobile_text {
+        display: none;
+      }
+      .desktop_text {
+        display: block;
+      }
     }
-  }
 </style>
 
 <div class="heading_text">
