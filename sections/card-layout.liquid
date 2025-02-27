@@ -211,7 +211,7 @@
 </div>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function () {
     if (window.innerWidth <= 768) {
       const carousel = document.querySelector('.carousel-inner');
       const prevBtn = document.querySelector('.prev-btn');
@@ -239,21 +239,10 @@
       });
 
       prevBtn.addEventListener('click', () => {
-        console.log("click prev")
-        carousel.scrollBy({ left: -300, behavior: 'smooth' });
+        carousel.scrollBy({ left: -carousel.offsetWidth, behavior: 'smooth' });
       });
       nextBtn.addEventListener('click', () => {
-        console.log("click next")
-        carousel.scrollBy({ left: 300, behavior: 'smooth' });
-      });
-
-      // Add event listener for mouse wheel
-      carousel.addEventListener('wheel', (e) => {
-        if (e.deltaY > 0) {
-          carousel.scrollBy({ left: 300, behavior: 'smooth' });
-        } else {
-          carousel.scrollBy({ left: -300, behavior: 'smooth' });
-        }
+        carousel.scrollBy({ left: carousel.offsetWidth, behavior: 'smooth' });
       });
     }
   });
