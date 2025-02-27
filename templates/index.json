@@ -46,6 +46,30 @@
         "cta_link": ""
       }
     },
+    "rich_text_qjtipj": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_ePaaiG": {
+          "type": "heading",
+          "settings": {
+            "heading": "What Better Blood Flow Can Do For You",
+            "heading_size": "hxl"
+          }
+        }
+      },
+      "block_order": [
+        "heading_ePaaiG"
+      ],
+      "custom_css": [],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-9d69609f-e82b-4737-b94b-25ad02ca5f3b",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "card_layout_afGqzP": {
       "type": "card-layout",
       "blocks": {
@@ -85,6 +109,7 @@
   "order": [
     "hero_L7X6xw",
     "benefits_ykLcm3",
+    "rich_text_qjtipj",
     "card_layout_afGqzP"
   ]
 }
