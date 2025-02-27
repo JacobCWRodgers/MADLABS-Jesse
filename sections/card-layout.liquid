@@ -113,24 +113,24 @@
   .heading_text {
     text-align: center;
     padding: 10px 8vw;
-    color: #6F1645;
+   ;
   }
 
-  
+
   .desktop_text {
     display: none;
+     color: #6F1645
   }
 
   @media screen and (min-width: 700px) {
     .mobile_text {
       display: none;
+       color: #6F1645
     }
     .desktop_text {
       display: block;
     }
   }
-
-  
 </style>
 <div class="heading_text">
   <h4 class="desktop_text">What Better Blood Flow Can Do For You</h4>
@@ -139,7 +139,10 @@
 
 <div class="cards-container">
   {% for block in section.blocks %}
-    <div class="card" style="background-repeat: no-repeat; background-image: url('{{ block.settings.background_image | img_url: 'large' }}');">
+    <div
+      class="card"
+      style="background-repeat: no-repeat; background-image: url('{{ block.settings.background_image | img_url: 'large' }}');"
+    >
       <div class="card-content">
         <img src="{{ block.settings.icon | img_url: 'small' }}" alt="Icon">
         <p>{{ block.settings.text }}</p>
@@ -150,10 +153,12 @@
 
 <!-- Mobile -->
 <div class="carousel">
-  
   <div class="carousel-inner">
     {% for block in section.blocks %}
-      <div class="card" style="background-position: center; margin: 0 auto; background-repeat: no-repeat; background-image: url('{{ block.settings.background_image | img_url: 'large' }}');">
+      <div
+        class="card"
+        style="background-position: center; margin: 0 auto; background-repeat: no-repeat; background-image: url('{{ block.settings.background_image | img_url: 'large' }}');"
+      >
         <div class="card-content">
           <img src="{{ block.settings.icon | img_url: 'small' }}" alt="Icon">
           <p>{{ block.settings.text }}</p>
@@ -161,21 +166,20 @@
       </div>
     {% endfor %}
   </div>
-  
 </div>
 <div>
   <button class="next-btn">
     <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="25.5" cy="25.5" r="25.5" fill="#C4A562"/>
-<path d="M39.5 25.134C40.1667 25.5189 40.1667 26.4811 39.5 26.866L20 38.1244C19.3333 38.5093 18.5 38.0281 18.5 37.2583L18.5 14.7417C18.5 13.9719 19.3333 13.4907 20 13.8756L39.5 25.134Z" fill="white"/>
-</svg>
-</button>
+      <circle cx="25.5" cy="25.5" r="25.5" fill="#C4A562"/>
+      <path d="M39.5 25.134C40.1667 25.5189 40.1667 26.4811 39.5 26.866L20 38.1244C19.3333 38.5093 18.5 38.0281 18.5 37.2583L18.5 14.7417C18.5 13.9719 19.3333 13.4907 20 13.8756L39.5 25.134Z" fill="white"/>
+    </svg>
+  </button>
   <button class="prev-btn">
     <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
-<ellipse cx="25.5" cy="25.5" rx="25.5" ry="25.5" transform="rotate(-180 25.5 25.5)" fill="#C4A562"/>
-<path d="M11.5 25.866C10.8333 25.4811 10.8333 24.5189 11.5 24.134L31 12.8756C31.6667 12.4907 32.5 12.9719 32.5 13.7417L32.5 36.2583C32.5 37.0281 31.6667 37.5093 31 37.1244L11.5 25.866Z" fill="white"/>
-</svg>
-</button>
+      <ellipse cx="25.5" cy="25.5" rx="25.5" ry="25.5" transform="rotate(-180 25.5 25.5)" fill="#C4A562"/>
+      <path d="M11.5 25.866C10.8333 25.4811 10.8333 24.5189 11.5 24.134L31 12.8756C31.6667 12.4907 32.5 12.9719 32.5 13.7417L32.5 36.2583C32.5 37.0281 31.6667 37.5093 31 37.1244L11.5 25.866Z" fill="white"/>
+    </svg>
+  </button>
 </div>
 
 <script>
@@ -187,7 +191,7 @@
       let isDown = false;
       let startX;
       let scrollLeft;
-      
+
       carousel.addEventListener('mousedown', (e) => {
         isDown = true;
         startX = e.pageX - carousel.offsetLeft;
