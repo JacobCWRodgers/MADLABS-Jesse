@@ -42,8 +42,7 @@
 {% endschema %}
 
 <style>
-          /* Grid and Carousel Styles */
-
+  /* Grid and Carousel Styles */
 
   .mobile_text {
     margin: 0;
@@ -200,11 +199,13 @@
 </div>
 
 <!-- Desktop Grid -->
-<div class="cards-container">
+<div class="cards-container" role="region" aria-label="Cards Grid">
   {% for block in section.blocks %}
     <div
       class="card"
       style="background-size: cover; background-repeat: no-repeat; background-image: url('{{ block.settings.background_image | img_url: 'large' }}');"
+      role="article"
+      aria-label="{{ block.settings.text }}"
     >
       <div class="card-content">
         <img src="{{ block.settings.icon | img_url: 'small' }}" alt="Icon" width="40px" height="100%">
@@ -215,12 +216,14 @@
 </div>
 
 <!-- Mobile Carousel -->
-<div class="carousel">
+<div class="carousel" role="region" aria-label="Cards Carousel">
   <div class="carousel-inner">
     {% for block in section.blocks %}
       <div
         class="card"
         style="background-size: cover; background-position: center; background-repeat: no-repeat; background-image: url('{{ block.settings.background_image | img_url: 'large' }}');"
+        role="article"
+        aria-label="{{ block.settings.text }}"
       >
         <div class="card-content">
           <img src="{{ block.settings.icon | img_url: 'small' }}" alt="Icon">
@@ -230,14 +233,30 @@
     {% endfor %}
   </div>
   <div class="carousel-buttons">
-    <button class="prev-btn">
-      <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <button class="prev-btn" aria-label="Previous Card">
+      <svg
+        width="51"
+        height="51"
+        viewBox="0 0 51 51"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+        focusable="false"
+      >
         <ellipse cx="25.5" cy="25.5" rx="25.5" ry="25.5" transform="rotate(-180 25.5 25.5)" fill="#C4A562"/>
         <path d="M11.5 25.866C10.8333 25.4811 10.8333 24.5189 11.5 24.134L31 12.8756C31.6667 12.4907 32.5 12.9719 32.5 13.7417L32.5 36.2583C32.5 37.0281 31.6667 37.5093 31 37.1244L11.5 25.866Z" fill="white"/>
       </svg>
     </button>
-    <button class="next-btn">
-      <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <button class="next-btn" aria-label="Next Card">
+      <svg
+        width="51"
+        height="51"
+        viewBox="0 0 51 51"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+        focusable="false"
+      >
         <circle cx="25.5" cy="25.5" r="25.5" fill="#C4A562"/>
         <path d="M39.5 25.134C40.1667 25.5189 40.1667 26.4811 39.5 26.866L20 38.1244C19.3333 38.5093 18.5 38.0281 18.5 37.2583L18.5 14.7417C18.5 13.9719 19.3333 13.4907 20 13.8756L39.5 25.134Z" fill="white"/>
       </svg>
@@ -246,7 +265,7 @@
 </div>
 
 <script>
-        document.addEventListener('DOMContentLoaded', function () {
+  document.addEventListener('DOMContentLoaded', function () {
     if (window.innerWidth <= 768) {
       const carousel = document.querySelector('.carousel-inner');
       const prevBtn = document.querySelector('.prev-btn');
