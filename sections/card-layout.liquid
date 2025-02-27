@@ -238,20 +238,22 @@
         card.style.scrollSnapAlign = 'start';
       });
 
-      // Function to check scroll position and update button states
-      const updateButtonStates = () => {
-        const scrollLeft = carousel.scrollLeft;
-        const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth;
+      // Function to update button states
+      function updateButtonStates() {
+        // Check for start of carousel
+        const isAtStart = carousel.scrollLeft <= 0;
+        prevBtn.disabled = isAtStart;
+        prevBtn.style.opacity = isAtStart ? '0.5' : '1';
 
-        // Disable/enable previous button
-        prevBtn.disabled = scrollLeft <= 0;
+        // Check for end of carousel (with small threshold for rounding errors)
+        const isAtEnd = carousel.scrollLeft >= (carousel.scrollWidth - carousel.clientWidth - 1);
+        nextBtn.disabled = isAtEnd;
+        nextBtn.style.opacity = isAtEnd ? '0.5' : '1';
+      }
 
-        // Disable/enable next button
-        nextBtn.disabled = scrollLeft >= maxScrollLeft - 1; // Add a small buffer for rounding errors
-      };
-
-      // Initial button state check
-      updateButtonStates();
+      // Initial button state - Disable previous button by default
+      prevBtn.disabled = true;
+      prevBtn.style.opacity = '0.5';
 
       // Button navigation
       prevBtn.addEventListener('click', () => {
@@ -269,9 +271,6 @@
           behavior: 'smooth'
         });
       });
-
-      // Update button states after scrolling
-      carousel.addEventListener('scroll', updateButtonStates);
 
       // Touch/swipe handling
       let startX, scrollLeft;
@@ -295,6 +294,10 @@
         isDown = false;
         updateButtonStates();
       });
+
+      // Update button states on scroll and resize
+      carousel.addEventListener('scroll', updateButtonStates);
+      window.addEventListener('resize', updateButtonStates);
     }
   });
 </script>
