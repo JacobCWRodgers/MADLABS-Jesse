@@ -115,7 +115,7 @@
     gap: 15px;
   }
 
-  /* Navigation buttons (unchanged) */
+  /* Navigation buttons */
   .carousel-buttons {
     margin-top: 50px;
     width: 100%;
@@ -211,40 +211,58 @@
 </div>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      if (window.innerWidth <= 768) {
-        const carousel = document.querySelector('.carousel-inner');
-        const prevBtn = document.querySelector('.prev-btn');
-        const nextBtn = document.querySelector('.next-btn');
-        let isDown = false;
-        let startX;
-        let scrollLeft;
+  document.addEventListener('DOMContentLoaded', function () {
+    if (window.innerWidth <= 768) {
+      const carousel = document.querySelector('.carousel-inner');
+      const prevBtn = document.querySelector('.prev-btn');
+      const nextBtn = document.querySelector('.next-btn');
+      let isDown = false;
+      let startX;
+      let scrollLeft;
 
-        // Touch support
-  carousel.addEventListener('touchstart', (e) => {
-    isDown = true;
-    startX = e.touches[0].pageX - carousel.offsetLeft;
-    scrollLeft = carousel.scrollLeft;
+      // Mouse events for desktop (or mouse-enabled devices)
+      carousel.addEventListener('mousedown', (e) => {
+        isDown = true;
+        startX = e.pageX - carousel.offsetLeft;
+        scrollLeft = carousel.scrollLeft;
+      });
+      carousel.addEventListener('mouseleave', () => {
+        isDown = false;
+      });
+      carousel.addEventListener('mouseup', () => {
+        isDown = false;
+      });
+      carousel.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - carousel.offsetLeft;
+        const walk = (x - startX) * 2;
+        carousel.scrollLeft = scrollLeft - walk;
+      });
+
+      // Touch events for mobile devices
+      carousel.addEventListener('touchstart', (e) => {
+        isDown = true;
+        startX = e.touches[0].pageX - carousel.offsetLeft;
+        scrollLeft = carousel.scrollLeft;
+      });
+      carousel.addEventListener('touchend', () => {
+        isDown = false;
+      });
+      carousel.addEventListener('touchmove', (e) => {
+        if (!isDown) return;
+        const x = e.touches[0].pageX - carousel.offsetLeft;
+        const walk = (x - startX) * 2;
+        carousel.scrollLeft = scrollLeft - walk;
+      });
+
+      // Navigation buttons
+      prevBtn.addEventListener('click', () => {
+        carousel.scrollBy({ left: -300, behavior: 'smooth' });
+      });
+      nextBtn.addEventListener('click', () => {
+        carousel.scrollBy({ left: 300, behavior: 'smooth' });
+      });
+    }
   });
-
-  carousel.addEventListener('touchend', () => {
-    isDown = false;
-  });
-
-  carousel.addEventListener('touchmove', (e) => {
-    if (!isDown) return;
-    const x = e.touches[0].pageX - carousel.offsetLeft;
-    const walk = (x - startX) * 2;
-    carousel.scrollLeft = scrollLeft - walk;
-  });
-
-
-        prevBtn.addEventListener('click', () => {
-          carousel.scrollBy({ left: -300, behavior: 'smooth' });
-        });
-        nextBtn.addEventListener('click', () => {
-          carousel.scrollBy({ left: 300, behavior: 'smooth' });
-        });
-      }
-    });
 </script>
