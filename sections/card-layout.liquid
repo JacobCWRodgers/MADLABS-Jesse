@@ -239,10 +239,11 @@
       });
 
       prevBtn.addEventListener('click', () => {
-        console.log("click")
+        console.log("click prev")
         carousel.scrollBy({ left: -300, behavior: 'smooth' });
       });
       nextBtn.addEventListener('click', () => {
+        console.log("click next")
         carousel.scrollBy({ left: 300, behavior: 'smooth' });
       });
 
