@@ -132,24 +132,38 @@
   </div>
 
   <style>
-            .vinia-1000-resveratrol-text::after {
-      content: "";
-      display: block;
-      height: 221px;
-      width: 2px;
-      background-color: #C4A562;
-      margin: 0 auto;
-    }
+      .vinia-1000-resveratrol-text::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #C4A562;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
-    @media (min-width: 768px) {
-      .vinia-1000-resveratrol-text::after {
-        transform: rotate(45deg);
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) rotate(45deg);
-      }
-    }
+.vinia-1000-resveratrol-text::after {
+  content: "";
+  display: block;
+  height: 221px;
+  width: 2px;
+  background-color: #C4A562;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .vinia-1000-resveratrol-text::after {
+    transform: rotate(45deg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+}
+
 
 
 
