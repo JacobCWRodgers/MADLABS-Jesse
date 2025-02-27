@@ -30,12 +30,7 @@
   "presets": [
     {
       "name": "Cards Carousel",
-      "category": "Custom",
-      "blocks": [
-        { "type": "card" },
-        { "type": "card" },
-        { "type": "card" }
-      ]
+      "blocks": [{ "type": "card" }, { "type": "card" }, { "type": "card" }]
     }
   ]
 }
@@ -81,7 +76,7 @@
   }
 
   .card {
-    color: #6F1645;
+    color: #6f1645;
     position: relative;
     font-weight: 700;
     line-height: 21.79px;
@@ -124,7 +119,7 @@
     gap: 120px;
   }
   .carousel-buttons button {
-    background: url('{{ 'Group 189.png' | asset_url }}') no-repeat center center;
+    background: url('{{ 'Group189png' | asset_url }}') no-repeat center center;
     background-size: contain;
     border: none;
     width: 50px;
@@ -138,7 +133,7 @@
     padding: 10px 8vw;
   }
   .heading_text h4 {
-    color: #6F1645;
+    color: #6f1645;
     font-size: 50px;
   }
 
@@ -169,10 +164,10 @@
   {% for block in section.blocks %}
     <div
       class="card"
-      style="background-repeat: no-repeat; background-image: url('{{ block.settings.background_image | img_url: 'large' }}');"
+      style="background-repeat: no-repeat; background-image: url('{{ block.settings.background_image | image_url: 'large' }}');"
     >
       <div class="card-content">
-        <img src="{{ block.settings.icon | img_url: 'small' }}" alt="Icon">
+        <img src="{{ block.settings.icon | image_url: 'small' }}" alt="Icon" width="40" height="auto">
         <p>{{ block.settings.text }}</p>
       </div>
     </div>
@@ -185,10 +180,10 @@
     {% for block in section.blocks %}
       <div
         class="card"
-        style="background-size: cover; background-position: center; background-repeat: no-repeat; background-image: url('{{ block.settings.background_image | img_url: 'large' }}');"
+        style="background-size: cover; background-position: center; background-repeat: no-repeat; background-image: url('{{ block.settings.background_image | image_url: 'large' }}');"
       >
         <div class="card-content">
-          <img src="{{ block.settings.icon | img_url: 'small' }}" alt="Icon">
+          <img src="{{ block.settings.icon | image_url: 'small' }}" alt="Icon" width="40" height="auto">
           <p>{{ block.settings.text }}</p>
         </div>
       </div>
@@ -212,57 +207,55 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    if (window.innerWidth <= 768) {
-      const carousel = document.querySelector('.carousel-inner');
-      const prevBtn = document.querySelector('.prev-btn');
-      const nextBtn = document.querySelector('.next-btn');
-      let isDown = false;
-      let startX;
-      let scrollLeft;
+    const carousel = document.querySelector('.carousel-inner');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    let isDown = false;
+    let startX;
+    let scrollLeft;
 
-      // Mouse events for desktop (or mouse-enabled devices)
-      carousel.addEventListener('mousedown', (e) => {
-        isDown = true;
-        startX = e.pageX - carousel.offsetLeft;
-        scrollLeft = carousel.scrollLeft;
-      });
-      carousel.addEventListener('mouseleave', () => {
-        isDown = false;
-      });
-      carousel.addEventListener('mouseup', () => {
-        isDown = false;
-      });
-      carousel.addEventListener('mousemove', (e) => {
-        if (!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - carousel.offsetLeft;
-        const walk = (x - startX) * 2;
-        carousel.scrollLeft = scrollLeft - walk;
-      });
+    // Mouse events for desktop (or mouse-enabled devices)
+    carousel.addEventListener('mousedown', (e) => {
+      isDown = true;
+      startX = e.pageX - carousel.offsetLeft;
+      scrollLeft = carousel.scrollLeft;
+    });
+    carousel.addEventListener('mouseleave', () => {
+      isDown = false;
+    });
+    carousel.addEventListener('mouseup', () => {
+      isDown = false;
+    });
+    carousel.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - carousel.offsetLeft;
+      const walk = (x - startX) * 2;
+      carousel.scrollLeft = scrollLeft - walk;
+    });
 
-      // Touch events for mobile devices
-      carousel.addEventListener('touchstart', (e) => {
-        isDown = true;
-        startX = e.touches[0].pageX - carousel.offsetLeft;
-        scrollLeft = carousel.scrollLeft;
-      });
-      carousel.addEventListener('touchend', () => {
-        isDown = false;
-      });
-      carousel.addEventListener('touchmove', (e) => {
-        if (!isDown) return;
-        const x = e.touches[0].pageX - carousel.offsetLeft;
-        const walk = (x - startX) * 2;
-        carousel.scrollLeft = scrollLeft - walk;
-      });
+    // Touch events for mobile devices
+    carousel.addEventListener('touchstart', (e) => {
+      isDown = true;
+      startX = e.touches[0].pageX - carousel.offsetLeft;
+      scrollLeft = carousel.scrollLeft;
+    });
+    carousel.addEventListener('touchend', () => {
+      isDown = false;
+    });
+    carousel.addEventListener('touchmove', (e) => {
+      if (!isDown) return;
+      const x = e.touches[0].pageX - carousel.offsetLeft;
+      const walk = (x - startX) * 2;
+      carousel.scrollLeft = scrollLeft - walk;
+    });
 
-      // Navigation buttons
-      prevBtn.addEventListener('click', () => {
-        carousel.scrollBy({ left: -300, behavior: 'smooth' });
-      });
-      nextBtn.addEventListener('click', () => {
-        carousel.scrollBy({ left: 300, behavior: 'smooth' });
-      });
-    }
+    // Navigation buttons
+    prevBtn.addEventListener('click', () => {
+      carousel.scrollBy({ left: -300, behavior: 'smooth' });
+    });
+    nextBtn.addEventListener('click', () => {
+      carousel.scrollBy({ left: 300, behavior: 'smooth' });
+    });
   });
 </script>
