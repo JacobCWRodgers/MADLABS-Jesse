@@ -1,4 +1,8 @@
-<section id="vinia-1000-grapes-section" class="vinia-1000-grapes-section">
+<section
+  id="vinia-1000-grapes-section"
+  class="vinia-1000-grapes-section"
+  aria-label="Benefits of 1000 Grapes in Each Serving"
+>
   <div class="vinia-1000-container">
     <!-- Heading -->
     <div class="container">
@@ -10,14 +14,14 @@
     </div>
 
     <!-- Subheading / Intro Text -->
-    <div class="vinia-1000-subheading">
+    <div class="vinia-1000-subheading" role="contentinfo">
       {{ section.settings.main_subheading }}
     </div>
 
     <!-- Grape Image + Resveratrol Text -->
     <div class="vinia-1000-image-text">
       {% if section.settings.grape_image %}
-        <p class="vinia-1000-resveratrol-text">
+        <p class="vinia-1000-resveratrol-text" aria-label="Resveratrol content: 6mg Red Grape Piceid Resveratrol">
           6mg Red Grape <br>
           Piceid Resveratrol
         </p>
@@ -27,17 +31,18 @@
           height="100"
           src="{{ section.settings.grape_image | img_url: 'master' }}"
           alt="Red Grape Powder"
+          aria-describedby="vinia-1000-resveratrol-text"
         >
       {% endif %}
     </div>
 
     <!-- Stats Row -->
-    <div class="vinia-1000-stats">
+    <div class="vinia-1000-stats" role="region" aria-label="Statistics about VINIA">
       <div class="vinia-1000-stat">
         <h3 class="vinia-1000-stat-heading">70% Increase In Arterial Dilation</h3>
         <p>
-          Our clinical trial showed that VINIA® increased the dilation of arteries by at least 70% for each person who
-          took VINIA® daily for 90 days.*
+          Our clinical trial showed that VINIA increased the dilation of arteries by at least 70% for each person who
+          took VINIA daily for 90 days.*
         </p>
       </div>
       <div class="content">
@@ -45,7 +50,8 @@
           src="https://cdn.shopify.com/s/files/1/0633/2494/6515/files/with_without.png?v=1740515081"
           width="100%"
           height="100%"
-          alt=""
+          alt="Comparison of arterial dilation with and without VINIA"
+          aria-describedby="vinia-1000-stat-heading"
         >
         <div class="flex-container">
           <div class="stat-container">
@@ -57,7 +63,7 @@
               </p>
             </div>
             <p>
-              Helping blood vessels dilate to promote proper blood flow. Our in vitro study showed that VINIA® boosts
+              Helping blood vessels dilate to promote proper blood flow. Our in vitro study showed that VINIA boosts
               nitric oxide production by 120%.*
             </p>
           </div>
@@ -71,18 +77,18 @@
             </div>
             <p>
               ET-1 is a peptide that increases as you age, constricts blood vessels and slows down blood. Our in vitro
-              study showed that VINIA® decreases Endothelin-1 by 50%.*
+              study showed that VINIA decreases Endothelin-1 by 50%.*
             </p>
           </div>
           <div class="links">
-            <a id="clinicalsLink">Read Clinicals</a>
+            <a id="clinicalsLink" href="#" aria-label="Read Clinicals">Read Clinicals</a>
             <a
               href="{{ section.settings.button_link }}"
               class="brand-button"
-
               target="{{ section.settings.button_link_target }}"
+              aria-label="Get Your VINIA"
             >
-              <span class="reduced-button-font">Get Your VINIA®</span>
+              <span class="reduced-button-font">Get Your VINIA</span>
               <svg
                 class="button_icon"
                 width="35"
@@ -105,6 +111,7 @@
         <a
           href="{{ section.settings.read_clinicals_link }}"
           class="vinia-1000-btn vinia-1000-btn-secondary"
+          aria-label="Read Clinicals"
         >
           {{ section.settings.read_clinicals_text }}
         </a>
@@ -114,6 +121,7 @@
         <a
           href="{{ section.settings.cta_link }}"
           class="vinia-1000-btn vinia-1000-btn-primary"
+          aria-label="Get Your VINIA"
         >
           {{ section.settings.cta_text }}
         </a>
@@ -430,7 +438,7 @@
       "type": "textarea",
       "id": "main_subheading",
       "label": "Subheading Text",
-      "default": "Meet VINIA® – a unique grape superfood containing the king of Polyphenols, Piceid Resveratrol, and other heart-supporting plant-based bioactives..."
+      "default": "Meet VINIA – a unique grape superfood containing the king of Polyphenols, Piceid Resveratrol, and other heart-supporting plant-based bioactives..."
     },
     {
       "type": "image_picker",
@@ -476,7 +484,7 @@
       "type": "text",
       "id": "cta_text",
       "label": "CTA Button Text",
-      "default": "Get Your VINIA®"
+      "default": "Get Your VINIA"
     },
     {
       "type": "url",
