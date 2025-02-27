@@ -1261,7 +1261,8 @@ deferred-media {
 
 @media screen and (min-width: 700px) {
   .brand-button .button_icon{
-    top: 6px;
+      bottom: 1px;
+      top: 2px;
   }
 }
 
