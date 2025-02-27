@@ -42,152 +42,157 @@
 {% endschema %}
 
 <style>
-  /* Grid and Carousel Styles */
+    /* Grid and Carousel Styles */
 
-  .mobile_text {
-    margin: 0;
-  }
-  .cards-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-
-  .carousel {
-    display: none;
-    overflow: hidden;
-    white-space: nowrap;
-    position: relative;
-    -webkit-overflow-scrolling: touch;
-    scroll-behavior: smooth;
-    padding: 5vh 10px;
-  }
-
-  .carousel-inner {
-    padding-right: 20px;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE and Edge */
-    overflow-x: scroll;
-    scroll-behavior: smooth;
-  }
-
-  .carousel .card {
-    display: inline-block;
-    width: calc(100% - 20px);
-    margin: 0 15px 0 6px;
-    vertical-align: top;
-    min-height: 400px;
-  }
-
-  /* Responsive Design */
-
-  @media (max-width: 768px) {
-    .cards-container {
-      display: none;
-    }
-    .carousel {
-      display: block;
-    }
-  }
-
-  /* Card Styles */
-
-  .card {
-    color: #6F1645;
-    position: relative;
-    font-weight: 700;
-    line-height: 21.79px;
-    border-radius: 12px;
-    overflow: hidden;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 400px;
-  }
-
-  .card img {
-    width: 70px;
-    height: auto;
-    object-fit: contain;
-  }
-
-  /* Button Styles */
-
-  .carousel-buttons button {
-    background: url('{{ 'Group 189.png' | asset_url }}') no-repeat center center;
-    background-size: contain;
-    border: none;
-    cursor: pointer;
-    outline: none;
-  }
-
-  .carousel-buttons button:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-    pointer-events: none;
-  }
-
-  /* Card Content Styles */
-
-  .card-content {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 10px;
-    padding-left: 9%;
-    border-radius: 6px;
-    width: calc(100% - 20px);
-    text-align: left;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-  }
-
-  /* Navigation and Heading Styles */
-
-  .carousel-buttons {
-    margin-top: 50px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 120px;
-  }
-
-  .heading_text {
-    text-align: center;
-    padding: 10px 8vw;
-  }
-
-  .heading_text h4 {
-    color: #6F1645;
-    font-size: 50px;
-  }
-
-  /* Responsive Text Styles */
-
-  .desktop_text {
-    display: none;
-  }
-
-  @media screen and (min-width: 700px) {
     .mobile_text {
-      display: none;
+      margin: 0;
     }
-    .desktop_text {
-      display: block;
-      padding-bottom: 0;
-      margin-bottom: 0;
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
     }
 
-    .cards-container {
-      max-width: 70vw;
-      margin: 0 auto;
-      padding: 8vh 0;
+    .carousel {
+      display: none;
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+      -webkit-overflow-scrolling: touch;
+      scroll-behavior: smooth;
+      padding: 5vh 10px;
     }
+
+    .carousel-inner {
+      padding-right: 20px;
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none; /* IE and Edge */
+      overflow-x: scroll;
+      scroll-behavior: smooth;
+    }
+
+    .carousel .card {
+      display: inline-block;
+      width: calc(100% - 20px);
+      margin: 0 15px 0 6px;
+      vertical-align: top;
+      min-height: 400px;
+    }
+
+    /* Responsive Design */
+
+    @media (max-width: 768px) {
+      .cards-container {
+        display: none;
+      }
+      .carousel {
+        display: block;
+      }
+    }
+
+    /* Card Styles */
+
+    .card {
+      color: #6F1645;
+      position: relative;
+      font-weight: 700;
+      line-height: 21.79px;
+      border-radius: 12px;
+      overflow: hidden;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 400px;
+    }
+
+    .card img {
+      width: 70px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    /* Button Styles */
+
+    .carousel-buttons button {
+      background: url('{{ 'Group 189.png' | asset_url }}') no-repeat center center;
+      background-size: contain;
+      border: none;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .carousel-buttons button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+
+    /* Card Content Styles */
+
+    .card-content {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 10px;
+      padding-left: 9%;
+      border-radius: 6px;
+      width: calc(100% - 20px);
+      text-align: left;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    /* Navigation and Heading Styles */
+
+    .carousel-buttons {
+      margin-top: 50px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 120px;
+    }
+
+    .heading_text {
+      text-align: center;
+      padding: 10px 8vw;
+    }
+
+    .heading_text h4 {
+      color: #6F1645;
+      font-size: 50px;
+    }
+
+    /* Responsive Text Styles */
+
+    .desktop_text {
+      display: none;
+    }
+
+    @media screen and (min-width: 700px) {
+  .card {
+    min-height: 450px;
   }
+
+
+      .mobile_text {
+        display: none;
+      }
+      .desktop_text {
+        display: block;
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+
+      .cards-container {
+        max-width: 70vw;
+        margin: 0 auto;
+        padding: 8vh 0;
+      }
+    }
 </style>
 
 <div class="heading_text">
