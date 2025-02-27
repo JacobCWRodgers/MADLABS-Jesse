@@ -42,94 +42,95 @@
 {% endschema %}
 
 <style>
-  .cards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-  }
-  .carousel {
-    display: none;
-    overflow: hidden;
-    white-space: nowrap;
-    position: relative;
-  }
-  .carousel .card {
-    display: inline-block;
-    width: 100%;
-  }
-  @media (max-width: 768px) {
     .cards-container {
-      display: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
     }
     .carousel {
-      display: block;
-    }
-  }
-  .card {
-    position: relative;
-    border-radius: 12px;
-    overflow: hidden;
-    text-align: center;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 300px;
-  }
-  .card img {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-  }
-  .card-content {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 10px;
-    border-radius: 6px;
-    width: calc(100% - 20px);
-    text-align: center;
-  }
-  .carousel-buttons {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-  }
-  .carousel-buttons button {
-    background: url('{{ 'Group 189.png' | asset_url }}') no-repeat center center;
-    background-size: contain;
-    border: none;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    outline: none;
-  }
-
-  .heading_text {
-    text-align: center;
-    padding: 10px 8vw;
-  }
-
-
-  .desktop_text {
-    display: none;
-     color: #6F1645
-  }
-
-  @media screen and (min-width: 700px) {
-    .mobile_text {
       display: none;
-       color: #6F1645
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
     }
+    .carousel .card {
+      display: inline-block;
+      width: 100%;
+    }
+    @media (max-width: 768px) {
+      .cards-container {
+        display: none;
+      }
+      .carousel {
+        display: block;
+      }
+    }
+    .card {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      text-align: center;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 300px;
+    }
+    .card img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+    }
+    .card-content {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 10px;
+      border-radius: 6px;
+      width: calc(100% - 20px);
+      text-align: center;
+    }
+    .carousel-buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+    .carousel-buttons button {
+      background: url('{{ 'Group 189.png' | asset_url }}') no-repeat center center;
+      background-size: contain;
+      border: none;
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .heading_text {
+      text-align: center;
+      padding: 10px 8vw;
+    }
+    .heading_text h4 {
+      color: #6F1645;
+      font-size: 50px;
+    }
+
     .desktop_text {
-      display: block;
+      display: none;
     }
-  }
+
+    @media screen and (min-width: 700px) {
+      .mobile_text {
+        display: none;
+      }
+      .desktop_text {
+        display: block;
+      }
+    }
 </style>
 <div class="heading_text">
   <h4 class="desktop_text">What Better Blood Flow Can Do For You</h4>
