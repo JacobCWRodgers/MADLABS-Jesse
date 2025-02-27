@@ -53,7 +53,7 @@
           "type": "card",
           "settings": {
             "background_image": "shopify://shop_images/Rectangle_218.png",
-            "text": "More Mental Alertness",
+            "text": "More Mental <br> Alertness",
             "icon": "shopify://shop_images/Group.svg"
           }
         },
