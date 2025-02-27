@@ -48,20 +48,29 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
-  
-  /* Mobile carousel default is hidden */
+
+  /* Mobile carousel container is hidden on desktop */
   .carousel {
     display: none;
     overflow: hidden;
     white-space: nowrap;
     position: relative;
   }
+
+  /* Carousel inner: add right padding for 20px overhang */
+  .carousel-inner {
+    padding-right: 20px;
+  }
+
+  /* Mobile carousel card: reduce width to allow next card to peek (20px overhang) */
   .carousel .card {
     display: inline-block;
-    width: 100%;
+    width: calc(100% - 20px);
+    margin-right: 20px;
+    vertical-align: top;
   }
-  
-  /* Switch to carousel on mobile screens */
+
+  /* Show carousel only on mobile screens */
   @media (max-width: 768px) {
     .cards-container {
       display: none;
@@ -70,7 +79,7 @@
       display: block;
     }
   }
-  
+
   .card {
     color: #6F1645;
     position: relative;
@@ -90,19 +99,23 @@
     height: 80px;
     object-fit: contain;
   }
+
+  /* Card content: positioned at bottom-left with left-aligned text */
   .card-content {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+    position: absolute;
     bottom: 10px;
-    position: relative;
     left: 10px;
     background: rgba(255, 255, 255, 0.8);
     padding: 10px;
     border-radius: 6px;
     width: calc(100% - 20px);
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 15px;
   }
-  /* Updated controls: now at the bottom of the card */
+
+  /* Navigation buttons (unchanged) */
   .carousel-buttons {
     margin-top: 50px;
     width: 100%;
@@ -119,7 +132,7 @@
     cursor: pointer;
     outline: none;
   }
-  
+
   .heading_text {
     text-align: center;
     padding: 10px 8vw;
@@ -128,11 +141,11 @@
     color: #6F1645;
     font-size: 50px;
   }
-  
+
   .desktop_text {
     display: none;
   }
-  
+
   @media screen and (min-width: 700px) {
     .mobile_text {
       display: none;
@@ -144,7 +157,10 @@
 </style>
 
 <div class="heading_text">
-  <h4 class="desktop_text">What Better Blood Flow <br> Can Do For You</h4>
+  <h4 class="desktop_text">
+    What Better Blood Flow <br>
+    Can Do For You
+  </h4>
   <h4 class="mobile_text">The Health Benefits of 1000 Grapes in Each Serving</h4>
 </div>
 
@@ -169,7 +185,7 @@
     {% for block in section.blocks %}
       <div
         class="card"
-        style="background-size: contain; background-position: center; margin: 0 auto; background-repeat: no-repeat; background-image: url('{{ block.settings.background_image | img_url: 'large' }}');"
+        style="background-size: contain; background-position: center; background-repeat: no-repeat; background-image: url('{{ block.settings.background_image | img_url: 'large' }}');"
       >
         <div class="card-content">
           <img src="{{ block.settings.icon | img_url: 'small' }}" alt="Icon">
