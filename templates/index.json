@@ -61,7 +61,7 @@
           "type": "card",
           "settings": {
             "background_image": "shopify://shop_images/Rectangle_234.png",
-            "text": "More Oxygen and Nutrient Delivery",
+            "text": "More Oxygen and <br> Nutrient Delivery",
             "icon": "shopify://shop_images/Vector.svg"
           }
         },
@@ -69,7 +69,7 @@
           "type": "card",
           "settings": {
             "background_image": "shopify://shop_images/Rectangle_220.png",
-            "text": "More Physical Energy",
+            "text": "More Physical <br> Energy",
             "icon": "shopify://shop_images/Group_1033.svg"
           }
         }
