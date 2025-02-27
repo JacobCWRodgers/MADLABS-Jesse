@@ -3765,6 +3765,12 @@ details-disclosure > details {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
 }
 
+@media screen and (min-width: 700px) {
+  .icon-cart-empty, .icon-cart {
+  margin-top: 10px
+}
+}
+
 
 
 
