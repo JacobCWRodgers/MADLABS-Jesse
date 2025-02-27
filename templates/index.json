@@ -33,7 +33,7 @@
     "benefits_ykLcm3": {
       "type": "benefits",
       "custom_css": [
-        "section {padding: 0 5px;}"
+        "section {padding: 0 5vw;}"
       ],
       "settings": {
         "main_heading": "The Health Benefits of  1000 Grapes in Each Serving",
