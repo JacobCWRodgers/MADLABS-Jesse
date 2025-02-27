@@ -152,29 +152,31 @@
           }
        } */
       .vinia-1000-resveratrol-text {
-      position: relative;
-      width: 20px; /* Set the width of the container */
-      height: 20px; /* Set the height of the container */
-    }
+  position: relative;
+  width: 20px; /* Set the width of the container */
+  height: 20px; /* Set the height of the container */
+}
 
-    .vinia-1000-resveratrol-text::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 20px; /* Set the width of the SVG */
-      height: 20px; /* Set the height of the SVG */
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='10' fill='%23C4A562'/%3E%3Cline x1='20' y1='10' x2='100' y2='60' stroke='%23C4A562' stroke-width='1.4'/%3E%3C/svg%3E");
-      background-size: 100% 100%;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
+.vinia-1000-resveratrol-text::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px; /* Set the width of the SVG */
+  height: 205px; /* Set the height of the SVG */
+  background-image: url("data:image/svg+xml,%3Csvg width='6' height='205' viewBox='0 0 6 205' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.221456 2.11869C-0.265276 3.5087 0.46697 5.03009 1.85697 5.51683C3.24698 6.00356 4.76837 5.27131 5.25511 3.88131C5.74184 2.4913 5.00959 0.969907 3.61959 0.483175C2.22958 -0.00355761 0.708189 0.728689 0.221456 2.11869ZM3.23828 204.5L3.23828 3L2.23828 3L2.23828 204.5L3.23828 204.5Z' fill='%23C4A562'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
-    @media (min-width: 768px) {
-      .vinia-1000-resveratrol-text::after {
-        width: 250px; 
-      }
-    }
+@media (min-width: 768px) {
+  .vinia-1000-resveratrol-text::after {
+    width: 6px; /* Set the width of the SVG for larger screens */
+    height: 205px; /* Set the height of the SVG for larger screens */
+  }
+}
+
 
 
 
