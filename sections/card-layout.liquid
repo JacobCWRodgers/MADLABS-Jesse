@@ -211,40 +211,48 @@
 </div>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      if (window.innerWidth <= 768) {
-        const carousel = document.querySelector('.carousel-inner');
-        const prevBtn = document.querySelector('.prev-btn');
-        const nextBtn = document.querySelector('.next-btn');
-        let isDown = false;
-        let startX;
-        let scrollLeft;
+  document.addEventListener('DOMContentLoaded', function () {
+    if (window.innerWidth <= 768) {
+      const carousel = document.querySelector('.carousel-inner');
+      const prevBtn = document.querySelector('.prev-btn');
+      const nextBtn = document.querySelector('.next-btn');
+      let isDown = false;
+      let startX;
+      let scrollLeft;
 
-        // Touch support
-  carousel.addEventListener('touchstart', (e) => {
-    isDown = true;
-    startX = e.touches[0].pageX - carousel.offsetLeft;
-    scrollLeft = carousel.scrollLeft;
-  });
+      // Touch support
+      carousel.addEventListener('touchstart', (e) => {
+        isDown = true;
+        startX = e.touches[0].pageX - carousel.offsetLeft;
+        scrollLeft = carousel.scrollLeft;
+      });
 
-  carousel.addEventListener('touchend', () => {
-    isDown = false;
-  });
+      carousel.addEventListener('touchend', () => {
+        isDown = false;
+      });
 
-  carousel.addEventListener('touchmove', (e) => {
-    if (!isDown) return;
-    const x = e.touches[0].pageX - carousel.offsetLeft;
-    const walk = (x - startX) * 2;
-    carousel.scrollLeft = scrollLeft - walk;
-  });
+      carousel.addEventListener('touchmove', (e) => {
+        if (!isDown) return;
+        const x = e.touches[0].pageX - carousel.offsetLeft;
+        const walk = (x - startX) * 2;
+        carousel.scrollLeft = scrollLeft - walk;
+      });
 
+      prevBtn.addEventListener('click', () => {
+        carousel.scrollBy({ left: -300, behavior: 'smooth' });
+      });
+      nextBtn.addEventListener('click', () => {
+        carousel.scrollBy({ left: 300, behavior: 'smooth' });
+      });
 
-        prevBtn.addEventListener('click', () => {
-          carousel.scrollBy({ left: -300, behavior: 'smooth' });
-        });
-        nextBtn.addEventListener('click', () => {
+      // Add event listener for mouse wheel
+      carousel.addEventListener('wheel', (e) => {
+        if (e.deltaY > 0) {
           carousel.scrollBy({ left: 300, behavior: 'smooth' });
-        });
-      }
-    });
+        } else {
+          carousel.scrollBy({ left: -300, behavior: 'smooth' });
+        }
+      });
+    }
+  });
 </script>
