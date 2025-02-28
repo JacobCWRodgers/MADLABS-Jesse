@@ -70,7 +70,7 @@
           "type": "card",
           "settings": {
             "background_image": "shopify://shop_images/1e66dd3a2bab75400f4930ccee1a23a0.webp",
-            "text": "More Physical  Energy",
+            "text": "More Physical <br> Energy",
             "icon": "shopify://shop_images/Group_1033.svg"
           }
         }
