@@ -55,7 +55,7 @@
         "card_JUfktV": {
           "type": "card",
           "settings": {
-            "background_image": "shopify://shop_images/8425ad8d007c16b72f3035f1d407425a.jpg",
+            "background_image": "shopify://shop_images/8425ad8d007c16b72f3035f1d407425a.webp",
             "text": "More Mental  Alertness",
             "icon": "shopify://shop_images/Group.svg"
           }
@@ -63,7 +63,7 @@
         "card_arFbBn": {
           "type": "card",
           "settings": {
-            "background_image": "shopify://shop_images/20f3336e8e47106558e4f91ae36dc160.jpg",
+            "background_image": "shopify://shop_images/20f3336e8e47106558e4f91ae36dc160.webp",
             "text": "More Oxygen and  Nutrient Delivery",
             "icon": "shopify://shop_images/Vector.svg"
           }
@@ -71,7 +71,7 @@
         "card_YrNEXq": {
           "type": "card",
           "settings": {
-            "background_image": "shopify://shop_images/1e66dd3a2bab75400f4930ccee1a23a0.jpg",
+            "background_image": "shopify://shop_images/1e66dd3a2bab75400f4930ccee1a23a0.webp",
             "text": "More Physical  Energy",
             "icon": "shopify://shop_images/Group_1033.svg"
           }
