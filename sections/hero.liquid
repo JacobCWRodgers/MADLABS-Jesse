@@ -16,16 +16,16 @@
     <!-- Text/Content Container -->
     <div class="banner-content">
       {% if section.settings.tagline != '' %}
-        <h4 class="banner-tagline" aria-label="Tagline: {{ section.settings.tagline | escape }}">
+        <h4 class="banner-tagline frankruhl" aria-label="Tagline: {{ section.settings.tagline | escape }}">
           {{ section.settings.tagline }}
         </h4>
       {% endif %}
 
       {% if section.settings.headline != '' %}
-        <h2 class="banner-headline" aria-label="Headline: {{ section.settings.headline | escape }}">
+        <h2 class="banner-headline frankruhl" aria-label="Headline: {{ section.settings.headline | escape }}">
           {{ section.settings.headline }}
         </h2>
-        <p class="offer-amount" aria-label="Offer Amount: {{ section.settings.offer_amount | escape }}">
+        <p class="offer-amount frankruhl" aria-label="Offer Amount: {{ section.settings.offer_amount | escape }}">
           {{ section.settings.offer_amount }}
         </p>
       {% endif %}
