@@ -32,9 +32,7 @@
     },
     "benefits_ykLcm3": {
       "type": "benefits",
-      "custom_css": [
-        "section {padding: 0 5vw;}"
-      ],
+      "custom_css": [],
       "settings": {
         "main_heading": "The Health Benefits of  1000 Grapes in Each Serving",
         "main_subheading": "Meet VINIA®, a red grape superfood containing the King of Polyphenols, <strong>Piceid Resveratrol</strong>, and other health-promoting plant-based bioactives. VINIA® has been found in a clinical trial to increase arterial dilation to support heart health and blood flow. One serving of VINIA® contains the equivalent amount of Piceid Resveratrol found in 1,000 red grapes or 1 full bottle of red wine.",
