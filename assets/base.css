@@ -19,6 +19,10 @@
   font-variation-settings: 'wght' 400;
 }
 
+.frankruhl {
+  font-family: "Frank Ruhl Libre", serif;
+}
+
 
 .product-card-wrapper .card,
 .contains-card--product {
